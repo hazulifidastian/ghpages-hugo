@@ -1,0 +1,78 @@
+.archive-item-link {
+  display: initial;
+  line-height: 1.5em;
+}
+
+.archive-item-date,
+.article-date {
+  color: #888;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto 2em auto;
+  display: block;
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 0.5em 1em 0.5em 0;
+}
+
+th,
+td {
+  border-bottom: 1px dashed #ccc;
+}
+
+.article-content figure {
+  margin: 0;
+  padding: 1em;
+  border: 2px dashed #ccc;
+}
+
+.article-content figure figcaption {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.article-content figure figcaption p {
+  margin: 0;
+}
+
+code {
+  display: initial;
+}
+
+pre code {
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .archive-item {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .archive-item-link {
+    line-height: 1.4em;
+  }
+
+  .archive-item-date {
+    text-align: right;
+    flex: 1 1 auto;
+    float: none;
+    min-width: 100px;
+  }
+
+  .higlight,
+  pre code,
+  code {
+    font-size: 1rem !important;
+  }
+}
