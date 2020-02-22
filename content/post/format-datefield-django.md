@@ -1,7 +1,7 @@
 ---
 title: "Format DateField Django"
 date: 2019-01-22T07:00:00+07:00
-draft: true
+draft: false
 tags: ["django"]
 ---
 
