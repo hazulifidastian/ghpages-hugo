@@ -11,16 +11,16 @@ disqusShortname = ""
   name = "Hazuli Fidastian"
 
 [[menu.main]]
-  identifier = "about"
-  name = "Me"
-  url = "/about/"
-  weight = 3
+    identifier = "about"
+    name = "Me"
+    url = "/about/"
+    weight = 3
 
 [[menu.main]]
-  identifier = "tags"
-  name = "Tags"
-  url = "/tags/"
-  weight = 3
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
 
 [params]
     mainSections = ["stories"]
@@ -40,15 +40,19 @@ disqusShortname = ""
     url = "favicon.ico"
 
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "monokailight"
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        hl_Lines = ""
+        lineNoStart = 1
+        lineNos = false
+        lineNumbersInTable = true
+        noClasses = true
+        style = "monokailight"
+    [markup.tableOfContents]
+        endLevel = 3
+        ordered = true
+        startLevel = 2
 
 [permalinks]
     stories = "/:filename"

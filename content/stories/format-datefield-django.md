@@ -3,11 +3,9 @@ title: "Format DateField Django"
 date: 2019-01-22T07:00:00+07:00
 draft: false
 tags: ["django"]
+toc: true
+description: Beberapa cara penggunaan format DateField didjango form.
 ---
-
-Beberapa cara penggunaan format DateField didjango form.
-
-<!--more-->
 
 ## Format Spesifik
 
