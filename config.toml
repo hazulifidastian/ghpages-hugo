@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Hazuli Fidastian"
 
 theme = "hugo-lithium-theme"
-disableKinds = ["section"]
+disableKinds = []
 googleAnalytics = ""
 disqusShortname = ""
 
@@ -23,7 +23,7 @@ disqusShortname = ""
   weight = 3
 
 [params]
-    mainSections = ["post"]
+    mainSections = ["stories"]
 
     description = ""
 
@@ -49,3 +49,6 @@ disqusShortname = ""
     lineNumbersInTable = true
     noClasses = true
     style = "monokailight"
+
+[permalinks]
+    stories = "/:filename"
