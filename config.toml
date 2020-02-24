@@ -51,7 +51,7 @@ disqusShortname = ""
         style = "monokailight"
     [markup.tableOfContents]
         endLevel = 3
-        ordered = true
+        ordered = false
         startLevel = 2
 
 [permalinks]
