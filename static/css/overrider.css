@@ -60,7 +60,7 @@ pre code {
 #article-toc #TableOfContents a:hover {
   border-bottom: 3px solid #cbf8df;
   box-shadow: inset 0 -4px 0 #cbf8df;
-  background: transparent;
+  background: #cbf8df;
   transition: background 150ms ease;
 }
 
@@ -71,6 +71,10 @@ pre code {
   overflow: hidden;
   border: none;
   background: #e5e5e5;
+}
+
+.article-tags {
+  margin-top: 3.5em;
 }
 
 @media (min-width: 600px) {
