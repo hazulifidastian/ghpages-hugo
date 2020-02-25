@@ -9,6 +9,8 @@ tags: ["tutorial", "hugo"]
 
 ## Mode Malam
 
+{{< figure src="/images/night-mode/night-mode.png" caption="Mode malam website" alt="Mode malam website" >}}
+
 Mode malam atau dengan nama lain mode gelap (dark mode), sudah menjadi trend desain antarmuka. Banyak aplikasi mobile, desktop bahkan website menerapkannya.
 
 Aplikasi messenger seperti telegram, slack, signals sudah menjadikan ini sebagai fiturnya. Terakhir whatsapp, meluncurkan fitur ini pada aplikasi beta di platform android.
