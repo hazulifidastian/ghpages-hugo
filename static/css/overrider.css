@@ -30,6 +30,7 @@ td {
   margin: 0;
   padding: 1em;
   border: 2px dashed #ccc;
+  text-align: center;
 }
 
 .article-content figure figcaption {
