@@ -1,0 +1,32 @@
+/* Night mode */
+
+html {
+  background-color: #06090e !important;
+  filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
+  -webkit-filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
+}
+
+body {
+  background-color: #fff !important;
+}
+
+img,
+video,
+body * [style*="background-image"] {
+  filter: hue-rotate(180deg) contrast(100%) invert(100%);
+  -webkit-filter: hue-rotate(180deg) contrast(100%) invert(100%);
+}
+
+#article-toc #TableOfContents a,
+.article-content a {
+  border-bottom: 3px solid #f8f8f8;
+  box-shadow: inset 0 -4px 0 #f8f8f8;
+}
+
+#article-toc #TableOfContents a:hover,
+.article-content a:hover {
+  border-bottom: 3px solid #f8f8f8;
+  box-shadow: inset 0 -4px 0 #f8f8f8;
+  background: #f8f8f8;
+}
+
