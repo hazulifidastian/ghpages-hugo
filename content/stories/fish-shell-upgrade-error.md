@@ -43,4 +43,4 @@ Saat terjadi masalah gagal upgrade fish shell saya langsung restart OS. Terminal
 
 Padahal awalnya terminal masih bisa dibuka. Harusnya saat itu langsung diterapkan solusi force overwrite.
 
-Kembalikan nilai shell menjadi default setelah berhasil. Cek **User default value** setelan opsi shell pada dconf-editor.
+Jangan lupa untuk mengembalikan nilai shell menjadi default setelah berhasil. Cek **User default value** setelan opsi shell pada dconf-editor.
