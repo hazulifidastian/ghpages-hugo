@@ -1,7 +1,7 @@
 ---
 title: "Fish Shell Upgrade Error"
 date: 2020-02-29T10:12:40+07:00
-draft: true
+draft: false
 tags: ["fish shell", "elementary os"]
 ---
 
