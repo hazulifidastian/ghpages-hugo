@@ -1,7 +1,7 @@
 ---
 title: "Suspendable App"
 date: 2020-03-02T06:25:49+07:00
-draft: true
+draft: false
 toc: true
 tags: ["python", "concurency"]
 description: Tulisan ini membahas cara melakukan suspend (menghentikan sementara) dan resume (melanjutkan kembali) aplikasi menggunakan python. Perintahnya ditrigger menggunakan shortcut pada keyboard.
