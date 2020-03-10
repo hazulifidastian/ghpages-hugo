@@ -65,7 +65,6 @@ dan `LightlineCocStatus`. Didalam fungsi inilah kita mengatur mekanisme untuk me
 informasi pada statusline.
 
 ```viml
-
 " Lebar minimal window
 let g:minwidth = 120
 
@@ -109,4 +108,5 @@ Bisa menyesuaikan dengan kebutuhan sendiri dan untuk bagian-bagian statusline ya
 
 Fungsi `winwidth` dari Nvim membantu kita untuk menentukan lebar window pada sebuah buffer.
 
-Untuk melihat konfigurasi lengkap saya untuk lightline, bisa ikuti [tautan ini](https://github.com/hazulifidastian/dotfiles/blob/master/.config/nvim/conf.d/plugins.d/lightline.vim).
+Untuk melihat konfigurasi lengkap saya untuk lightline, bisa ikuti 
+[tautan ini](https://github.com/hazulifidastian/dotfiles/blob/master/.config/nvim/init.vim.d/plugins.d/lightline.vim).
