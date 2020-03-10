@@ -5,7 +5,7 @@ title = "Hazuli Fidastian"
 theme = "hugo-lithium-theme"
 disableKinds = []
 googleAnalytics = "UA-9380146-9"
-disqusShortname = ""
+disqusShortname = "hazulifidastianid"
 
 [Author]
   name = "Hazuli Fidastian"
