@@ -3,6 +3,7 @@ title: "Custom Domain Github"
 date: 2017-06-28T08:00:00+07:00
 draft: false
 tags: ["tutorial", "github"]
+disqus: true
 ---
 
 Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus. 

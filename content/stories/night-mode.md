@@ -5,6 +5,7 @@ draft: false
 toc: true
 description: Mode malam (night mode) untuk website. Menggunakan HTML, CSS dan Javascript.
 tags: ["tutorial", "hugo"]
+disqus: true
 ---
 
 ## Mode Malam

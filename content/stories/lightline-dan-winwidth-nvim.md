@@ -3,6 +3,7 @@ title: "Lightline & winwidth Nvim"
 date: 2020-03-09T11:51:46+07:00
 draft: false
 tags: ["nvim", "lightline"]
+disqus: true
 ---
 
 Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal

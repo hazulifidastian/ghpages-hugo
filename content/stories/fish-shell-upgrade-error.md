@@ -3,6 +3,7 @@ title: "Fish Shell Upgrade Error"
 date: 2020-02-29T10:12:40+07:00
 draft: false
 tags: ["fish shell", "elementary os"]
+disqus: true
 ---
 
 Fish shell gagal di upgrade karena issue https://github.com/fish-shell/fish-shell/issues/5822. Package manager gagal me-replace file autocompletion rg.fish. 

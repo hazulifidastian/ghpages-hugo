@@ -5,6 +5,7 @@ draft: false
 tags: ["django"]
 toc: true
 description: Beberapa cara penggunaan format DateField didjango form.
+disqus: true
 ---
 
 ## Format Spesifik

@@ -3,6 +3,7 @@ title: "Halo Pelican"
 date: 2019-07-14T03:32:00+07:00
 draft: false
 tags: ["pelican"]
+disqus: true
 ---
 
 Website ini sebelumnya dibuat menggunakan pure html dan framework css skeleton. Fiturnya hanya berisi informasi personal statis dan jarang diperbarui.

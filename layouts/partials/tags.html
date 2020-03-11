@@ -1,7 +1,8 @@
 {{ if .Params.tags }}
 <div class="article-tags">
-    {{ range .Params.tags }}
-    <a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>&nbsp;
-    {{ end }}
+  {{ range.Params.tags }}
+  <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{ . }}</a
+  >&nbsp;
+  {{ end }}
 </div>
 {{ end }}

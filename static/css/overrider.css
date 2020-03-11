@@ -74,8 +74,8 @@ pre code {
 }
 
 .article-tags {
-  margin-top: 3.5em;
-  margin-bottom: 3.5em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 @media (min-width: 600px) {

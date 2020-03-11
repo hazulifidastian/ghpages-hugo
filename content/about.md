@@ -1,6 +1,7 @@
 ---
 title: 'About Me'
 weight: 2
+disqus: false
 ---
 
 ![Me](/images/me.png)
