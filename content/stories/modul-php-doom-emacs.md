@@ -10,7 +10,7 @@ disqus: true
 
 ### `init.el`
 
-Jelajah file konfigurasi dengan shorcut `SPC f p`, kemudian pilih file `init.el`. Kemudian aktifkan beberapa modul berikut, dengan cara menghilangkan tanda komentar `;;`.
+Jelajah file konfigurasi dengan shorcut `SPC f p`, kemudian pilih file `init.el`. Aktifkan beberapa modul dengan cara menghilangkan tanda komentar `;;`.
 
 1. Modul `syntax`, ada pada grup `:checkers`.
 2. Modul `lsp`, ada pada grup `:tools`.
@@ -20,7 +20,7 @@ Jelajah file konfigurasi dengan shorcut `SPC f p`, kemudian pilih file `init.el`
 
 Aktifkan package phpactor pada file konfigurasi `package.el`. Buka dengan shorcut `SPC f p`.
 
-```
+```elisp
 (package! phpactor)
 ```
 
@@ -43,7 +43,7 @@ Hasil instalasi ada pada direktori `~/.emacs.d/phpactor`.
 
 Modul `php` emacs doom memiliki beberapa ketergantugan paket PHP. Paket tambahan tersebut diinstalasi secara global menggunakan composer.
 
-```
+```bash
 composer global require \
     d11wtq/boris \
     phpunit/phpunit \
@@ -56,7 +56,7 @@ Setelah instalasi selesai, composer meletakkan file executable pada folder `\~/.
 
 Pastikan lokasi file executable dari composer berada dalam variable `PATH`.
 
-```
+```bash
 # place this in your profile file, like ~/.bash_profile or ~/.zshenv
 export PATH="~/.composer/vendor/bin:$PATH"
 ```
@@ -75,7 +75,7 @@ Intelephense adalah paket yang direkomendasikan oleh emacs-lsp untuk menjadi lsp
 
 Instalasi intelephense menggunakan aplikasi npm.
 
-```
+```bash
 sudo npm -i intelephense -g
 ```
 
