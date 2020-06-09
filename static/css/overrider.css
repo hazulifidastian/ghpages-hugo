@@ -58,6 +58,11 @@ pre code {
   display: block;
 }
 
+#article-toc {
+  padding: 0 1em;
+  border: 2px dashed #ccc;
+}
+
 #article-toc #TableOfContents a {
   text-decoration: none;
   border-bottom: 3px solid #cbf8df;
@@ -72,18 +77,13 @@ pre code {
   transition: background 150ms ease;
 }
 
-#article-toc hr {
-  width: 150px;
-  margin: 50px auto;
-  height: 1px;
-  overflow: hidden;
-  border: none;
-  background: #e5e5e5;
-}
-
 .article-tags {
   margin-top: 3em;
   margin-bottom: 3em;
+}
+
+.highlight {
+  border: 2px dashed #ccc !important;
 }
 
 @media (min-width: 600px) {
