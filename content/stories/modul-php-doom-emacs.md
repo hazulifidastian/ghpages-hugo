@@ -26,7 +26,7 @@ Aktifkan package phpactor pada file konfigurasi `package.el`. Buka dengan shorcu
 
 ### Sinkronisasi Konfigurasi Doom Emacs
 
-Ketikkan perintah `~/.emacs.d/bin/doom sync` untuk menyesuaikan perubahan pada konfigurasi pada doom emacs.
+Ketikkan perintah `~/.emacs.d/bin/doom sync` untuk menyesuaikan perubahan konfigurasi pada doom emacs.
 
 ## Install Phpactor
 
@@ -88,5 +88,5 @@ sudo npm -i intelephense -g
 - Perintah `phpactor-...` tidak tersedia.
   Pastikan konfigurasi `(package! phpactor)` pada file `package.el` tertulis dengan benar.
 - Pesan error, "LSP :: No LSP Server for php-mode".
-  Pastikan Intelephense sudah diinstalasi dengan benar dengan akses global. Periksa dengan perintah `which intelephense` pada terminal.
+  Pastikan Intelephense sudah diinstalasi dengan dengan akses global. Periksa dengan perintah `which intelephense` pada terminal.
 - Selalu jalankan perintah `~/.emacs.d/bin/doom sync` setiap ada perubahan konfigurasi pada emacs.

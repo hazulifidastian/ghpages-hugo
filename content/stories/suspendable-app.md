@@ -20,7 +20,7 @@ Kenapa harus konkurensi? Karena dua bagian yang dibutuhkan aplikasi diatas harus
 
 Dengan cara sekuens, kita tidak bisa mendapatkan hasil yang sama. Karena sekuens mengharuskan kita memilih salah satu bagian untuk dijalankan, dan membuat bagian yang lain harus menunggu yang sedang berjalan itu selesai.
 
-## Kebutuhan
+## Package yang Dibutuhkan
 
 Install package `pyinput` untuk menangani input dari user.
 
@@ -28,7 +28,7 @@ Install package `pyinput` untuk menangani input dari user.
 pip install pyinput
 ```
 
-Sebelumnya saya mencoba package `curses`, yang ternyata kurang cocok dengan kebutuhan untuk prototipe ini. Sepertinya `curses` digunakan jika kita ingin membuat antar muka / user inteface  dengan konsep _window_ diterminal.
+Sebelumnya saya mencoba package `curses`, yang ternyata kurang cocok dengan kebutuhan untuk prototipe ini. Sepertinya `curses` digunakan jika kita ingin membuat antar muka / user inteface dengan konsep _window_ diterminal.
 
 ## Keyboard Handler
 
@@ -143,11 +143,11 @@ if __name__ == '__main__':
 
 #### Fungsi `main` dan objek `Worker`
 
-Saat aplikasi pertama dijalankan saya membuat Thread baru yang terpisah dari proses utama. Thread baru ini membuat objek `Worker` yang akan mengeksekusi method `run()`. Dan mencetak tulisan "Working"  secara terus menerus diterminal.
+Saat aplikasi pertama dijalankan saya membuat Thread baru yang terpisah dari proses utama. Thread baru ini membuat objek `Worker` yang akan mengeksekusi method `run()`. Dan mencetak tulisan "Working" secara terus menerus diterminal.
 
 ##### `threading.Event`
 
-`Event` adalah kelas yang mengimplementasikan  objek event. Event memanajemen _flag_ yang bernilai boolean. Dengan perantara method `set()`, `clear()`, dan `wait()`.
+`Event` adalah kelas yang mengimplementasikan objek event. Event memanajemen _flag_ yang bernilai boolean. Dengan perantara method `set()`, `clear()`, dan `wait()`.
 
 Pada saat inisiasi _flag_ bernilai `False`.
 
@@ -158,6 +158,7 @@ def run(self):
         # Your main code here
         self.work()
 ```
+
 Pada method `run()`, saya memberikan kondisi menggunakan objek event. Objek inilah yang nantinya akan kita kontrol. Dan nilainya menentukan apakah program di suspend, atau dijalankan.
 
 Pada method `def __init__` di kelas `Worker` saya menjadikan flag objek event menjadi `True` saat diinstansiasi. Lihat perintah perintah `self.event.set()` dimethod tersebut.
@@ -174,6 +175,7 @@ def resume(self):
 def terminate(self):
     self.__stop = True
 ```
+
 Fungsi kontrol dilakukan dengan cara memanipulasi flag dari objek event.
 
 Saat objek dibuat, flag pada objek event bernilai `True`. Ini berarti program dijalankan. Dimethod `suspend()`, program dihentikan sementara. Caranya merubah nilai flag pada objek event menjadi `False` menggunakan method `clear()`.
@@ -192,6 +194,7 @@ def run(self):
         if self.event.is_set():
             self.work()
 ```
+
 Dia hanya melewatkan eksekusi saat disuspend (flag event bernilai `False`).
 
 Sejauh yang saya pahami, saya belum menemukan cara untuk benar-benar men-suspend sebuah `Thread`.
@@ -266,7 +269,7 @@ if __name__ == '__main__':
 
 #### Fungsi `main` dan `worker`
 
-Disini saya membuat proses (`Process`) baru yang terpisah dari proses utama. Proses baru ini mengeksekusi fungsi `worker` yang akan mencetak tulisan "Working"  secara terus menerus diterminal.
+Disini saya membuat proses (`Process`) baru yang terpisah dari proses utama. Proses baru ini mengeksekusi fungsi `worker` yang akan mencetak tulisan "Working" secara terus menerus diterminal.
 
 `proc.start()` akan memulai proses, dan `proc.join()` akan menunggu hingga proses selesai dijalankan. Tentunya proses selesai dijalankan jika kita perintahkan untuk berhenti menggunakan shortcut yang dihandle didalam fungsi `keyboard_handler(proc)`.
 
@@ -282,6 +285,7 @@ def resume():
 def quit():
     proc.terminate()
 ```
+
 Saya mengendalikan proses dengan mengirimkan signal tertentu pada proses. `SIGSTOP` untuk menghentikan sementara proses, dan `SIGCONT` untuk melanjutkan kembali proses.
 
 Kita bisa menghentikan proses dengan menggunakan method `proc.terminate()`. `terminate()` akan menghentikan proses dan melanjutkan eksekusi ke method `proc.join()`. Kemudian keseluruhan aplikasi akan berhenti.

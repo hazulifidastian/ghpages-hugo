@@ -14,7 +14,7 @@ body {
 
 .archive-item-date,
 .article-date {
-  color: #888;
+  color: #555;
   font-size: 17px;
 }
 
@@ -52,6 +52,25 @@ td {
   margin: 0;
 }
 
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  text-decoration: underline;
+}
+
+.article-content a {
+  border-bottom: 2px solid #ffce07;
+  box-shadow: inset 0 -3px 0 #ffce07;
+}
+
+.article-content a:hover,
+.article-content a:focus {
+  background: #ffce07;
+}
+
 code {
   display: initial;
 }
@@ -61,21 +80,22 @@ pre code {
 }
 
 #article-toc {
-  padding: 0 1em;
+  padding: 0.9em 1em;
   border: 2px dashed #ccc;
+}
+
+#article-toc h2 {
+  margin-top: 0;
 }
 
 #article-toc #TableOfContents a {
   text-decoration: none;
-  border-bottom: 3px solid #cbf8df;
-  box-shadow: inset 0 -4px 0 #cbf8df;
   color: inherit;
 }
 
 #article-toc #TableOfContents a:hover {
-  border-bottom: 3px solid #cbf8df;
-  box-shadow: inset 0 -4px 0 #cbf8df;
-  background: #cbf8df;
+  box-shadow: inset 0 -3px 0 #ffce07;
+  background: #ffce07;
   transition: background 150ms ease;
 }
 
@@ -84,8 +104,13 @@ pre code {
   margin-bottom: 3em;
 }
 
+.article-duration {
+  background-color: #555;
+}
+
 .highlight {
   border: 2px dashed #ccc !important;
+  padding: 0 1em;
 }
 
 @media (min-width: 600px) {
@@ -116,7 +141,7 @@ pre code {
   }
 
   .highlight {
-    font-size: 16px;
+    font-size: 1rem;
     margin: 40px 0;
   }
 }

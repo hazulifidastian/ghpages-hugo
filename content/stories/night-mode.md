@@ -20,7 +20,7 @@ Saya termasuk yang sering menggunakan antarmuka mode malam ini. Memang karena se
 
 Tampilan layar yang gelap membantu meringankan beban mata saat membaca. Mata tahan lebih lama dan tidak mudah perih.
 
-## Maksud
+## Why
 
 Mengikuti trend, web pribadi ini pun akan saya pasang fitur mode malam.
 
@@ -79,8 +79,12 @@ Setelah utak-atik lumayan lama, penyesuaian dengan tema telegram tidak seperti y
 ### Toggle, Tombol Tema
 
 ```html
-<a id="night-mode-toggle" title="Toggle Night/Light mode" 
-    data-current-mode="light" style="cursor: pointer;"></a>
+<a
+  id="night-mode-toggle"
+  title="Toggle Night/Light mode"
+  data-current-mode="light"
+  style="cursor: pointer;"
+></a>
 ```
 
 ### Javascript
@@ -97,8 +101,8 @@ Data tetap tersimpan pada browser. Tidak ada kadarluarsa. Bisa dihapus oleh webs
 var toggle = document.getElementById("night-mode-toggle");
 var currentMode = toggle.dataset.currentMode;
 var nightTheme = document.getElementById("night-mode-theme");
-var nightIcon = `<svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
-var lightIcon = `<svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`
+var nightIcon = `<svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+var lightIcon = `<svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
 
 toggle.addEventListener("click", () => {
   if (toggle.dataset.currentMode === "light") {
@@ -138,6 +142,7 @@ toggle.addEventListener("click", () => {
     // ...
 }
 ```
+
 Jika attribute `dataset-current-mode` berisi nilai `light`, akan memanggil fungsi setTheme menjadi mode malam. Dan sebaliknya jika berisi nilai `night`.
 
 Potongan kode ini menginisiasi standar mode yang digunakan.
@@ -151,7 +156,7 @@ Jika saat ini adalah kunjungan pertama pengguna. Maka, mode terang yang diterapk
 
 `function setTheme`, menerapkan mode sesuai dengan parameter mode yang diberikan.
 
-Fungsi ini juga akan mengganti data penanda mode yang saat ini aktif dan juga icon tombol mode. 
+Fungsi ini juga akan mengganti data penanda mode yang saat ini aktif dan juga icon tombol mode.
 
 ## Kesimpulan
 
@@ -159,4 +164,4 @@ Mode malam sudah menjadi trend, memudahkan pengunjung web saat membaca tulisan. 
 
 Membangun tema mode malam pada web tidaklah terlalu rumit. Hanya butuh kode sederhana di CSS dan Javascript saja.
 
-Penyesuaian warnanya yang rumit. Perlu mempelajari lebih lanjut fitur filter pada CSS. 
+Penyesuaian warnanya yang rumit. Perlu mempelajari lebih lanjut fitur filter pada CSS.

@@ -5,23 +5,13 @@ draft: false
 tags: ["emacs", "ubuntu", "elementary os"]
 ---
 
-Bagi yang ingin merasakan emacs versi  27, kita
-mungkin akan kesulitan menemukan paketnya di Ubuntu 18.04.
-Karena emacs versi 27 belum rilis versi stabilnya, juga 
-versi ini masih dalam tahap beta.
+Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan
+instalasi beberapa tools dan library.
 
-Jika browsing [launchpad](https://launchpad.net/~kelleyk/+archive/ubuntu/emacs "launchpad") 
-versi 27 juga belum ada. Terakhir masih versi 26.3.
-
-Jika tidak ingin menunggu rilis, dan ingin buru-buru mencicipi 
-emacs 27 ini kita bisa meng-compile sendiri.
-
-Prosesnya tidak terlalu sulit, hanya perlu instalasi
-beberapa tool dan librari. Kemudian kita download source code
-Emacs 27 dari github, selanjutnya kita bisa compile dan instal.
+**Compile & Install**
 
 ```bash
-# Jika sedang ada emacs26 sebaiknya diuninstall terlebih dahulu
+# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu
 sudo apt purge emacs26 emacs26-common
 
 # Install tools dan library
@@ -32,7 +22,7 @@ wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz
 
 tar -xzf emacs-27.0.91.tar.gz
 
-# Konfigurasi dan setup emacs
+# Konfigurasi dan install emacs
 cd emacs-27.0.91
 ./configure
 make
@@ -42,7 +32,9 @@ make install
 emacs --version
 ```
 
-Setelah instalasi selesai, file konfigurasi emacs perlu dibuild
+**Rebuild**
+
+Setelah instalasi selesai, file konfigurasi emacs perlu di **build**
 ulang menggunakan emacs versi terbaru. Saya menggunakan doom
 emacs, perintahnya:
 
@@ -51,9 +43,10 @@ emacs, perintahnya:
 ~/.emacs.d/bin/doom build
 ```
 
-Jika tidak dibuild ulang, emacs akan menampilkan interface standard.
-Konfigurasi themes dan lainnya yang kita gunakan dengan Emacs 26
-tidak cocok dengan Emacs 27.
+Jika tidak di **rebuild** ulang, emacs akan menampilkan interface standard.
+Hasil kompilasi konfigurasi menggunakan Emacs 26 tidak bisa digunakan pada Emacs 27.
+
+**Uninstall**
 
 Jika ingin menhapus instalasi, ketik perintah:
 
