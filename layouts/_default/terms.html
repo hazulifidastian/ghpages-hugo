@@ -6,8 +6,9 @@
         <h2 class="archive-title">Tags</h2>
         {{ range $index, $term := .Data.Terms.Alphabetical }}
         <article class="archive-item">
-            <a href="{{ .Page.Permalink }}" class="archive-item-link">{{ $term.Name }}</a>
-            <span class="archive-item-date">{{ $term.Count }}</span>
+            <a href="{{ .Page.Permalink }}" class="archive-item-link" style="margin-left: 0;">{{ $term.Name }}</a>
+            &nbsp;
+            <span class="archive-item-term-count">({{ $term.Count }})</span>
         </article>
         {{ end }}
     </div>
