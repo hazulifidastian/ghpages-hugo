@@ -9,18 +9,18 @@ disqus: true
 Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal
 yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang aktif.
 
-Statusline bisa ditampilkan dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori
+Statusline bisa menampilkan informasi dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori
 dari file, posisi kursor, dll.
 
 Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin
-Lightline[^1]. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah 
-mengatur tema untuk menambah indah tampilan editor.
+Lightline[^1]. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah
+mengatur tema untuk memper-indah tampilan status.
 
 [^1]: https://github.com/itchyny/lightline.vim
 
 Kendala yang saya alami saat menggunakan Lightline adalah, ketika saya mengecilkan terminal.
-Atau, ketika saya membagi window menjadi beberapa bagian horizontal (split horizontal). Informasi 
-yang saya prioritaskan untuk saya lihat, menghilang dari statusline. Yang tampil malah informasi 
+Atau, ketika saya membagi window menjadi beberapa bagian horizontal (split horizontal). Informasi
+yang saya prioritaskan untuk saya lihat, menghilang dari statusline. Yang tampil malah informasi
 yang tidak saya prioritaskan.
 
 Tulisan ini membahas bagaimana cara mengatur informasi yang tampil pada statusline tersebut.
@@ -46,7 +46,7 @@ let g:lightline = {
     \ }
 ```
 
-Penjelasan pengaturan dengan contoh kode diatas adalah, tampilkan `gitbranch` pada statusline 
+Penjelasan pengaturan dengan contoh kode diatas adalah, tampilkan `gitbranch` pada statusline
 aktif pada bagian kiri, dan `cocstatus` pada bagian kanan.
 
 Sedikit penjelasan, `gitbranch` berisi informasi branch/cabang git yang sedang aktif pada sebuah
@@ -54,15 +54,15 @@ repository Git. `cocstatus` adalah informasi yang berasal dari plugin `Coc`[^2].
 
 [^2]: https://github.com/neoclide/coc.nvim
 
-`gitbranch` dan `cocstatus` tersebut terhubung dengan `gitbranch` dan `cocstatus` pada bagian 
+`gitbranch` dan `cocstatus` tersebut terhubung dengan `gitbranch` dan `cocstatus` pada bagian
 `component_function`. Yang artinya, ketika statusline akan menampilkan `gitbranch` dan `cocstatus`,
 maka statusline akan mengeksekusi fungsi yang sudah diatur pada pengaturan `component_function`.
 
 Ketika akan menampilkan `gitbranch`, maka fungsi `LightlineFugitiveHead` akan dieksekusi. Untuk `cocstatus`,
 maka fungsi `LightlineCocStatus` yang akan dieksekusi.
 
-Pada contoh pengaturan diatas, kita sebenarnya membuat fungsi sendiri dengan nama, `LightlineFugitiveHead`, 
-dan `LightlineCocStatus`. Didalam fungsi inilah kita mengatur mekanisme untuk menampilkan 
+Pada contoh pengaturan diatas, kita sebenarnya membuat fungsi sendiri dengan nama, `LightlineFugitiveHead`,
+dan `LightlineCocStatus`. Didalam fungsi inilah kita mengatur mekanisme untuk menampilkan
 informasi pada statusline.
 
 ```viml
@@ -92,7 +92,7 @@ endfunction
 ```
 
 Kode diatas adalah contoh fungsi yang didalamnya melakukan pengecekan, apakah
-lebar window lebih besar dari nilai variabel lebar minimal window. Nilai variabel 
+lebar window lebih besar dari nilai variabel lebar minimal window. Nilai variabel
 lebar minimal window adalah `120`.
 
 Jika lebar window lebih besar, maka bagian `gitbranch` dan `cocstatus` akan ditampilkan.
@@ -109,5 +109,5 @@ Bisa menyesuaikan dengan kebutuhan sendiri dan untuk bagian-bagian statusline ya
 
 Fungsi `winwidth` dari Nvim membantu kita untuk menentukan lebar window pada sebuah buffer.
 
-Untuk melihat konfigurasi lengkap saya untuk lightline, bisa ikuti 
+Untuk melihat konfigurasi lengkap saya untuk lightline, bisa ikuti
 [tautan ini](https://github.com/hazulifidastian/dotfiles/blob/master/.config/nvim/init.vim.d/plugins.d/lightline.vim).

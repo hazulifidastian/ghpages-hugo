@@ -6,16 +6,50 @@ body {
   -moz-font-feature-settings: "liga" on;
 }
 
-.archive-item-link {
-  display: initial;
-  line-height: 1.5em;
-  font-size: 19px;
+.archive {
+  text-align: left;
 }
 
-.archive-item-date,
-.article-date {
-  color: #555;
-  font-size: 17px;
+.archive-title {
+  font-size: 32px;
+  margin-top: 60px;
+}
+
+.archive-item {
+  display: table;
+  clear: both;
+  margin: 5px 0 0.5em;
+  padding: 0;
+}
+
+.archive-item-date {
+  float: left;
+  color: #222;
+  font-family: "Lato", sans-serif;
+  font-size: 21px;
+  padding: 5px 0;
+  margin-top: 0px;
+  display: block;
+}
+
+.archive-item-link {
+  float: left;
+  display: block;
+  text-decoration: none;
+  font-size: 21px;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  margin-left: 1em;
+  color: #222;
+  padding: 5px 0;
+  border-bottom: none;
+}
+
+.archive-item-link:hover {
+  border-bottom: none;
+  box-shadow: inset 0 -3px 0 #ffce07;
+  background: #ffce07;
+  transition: background 150ms ease;
 }
 
 table {
@@ -104,6 +138,10 @@ pre code {
   margin-bottom: 3em;
 }
 
+.article-date {
+  color: #555;
+}
+
 .article-duration {
   background-color: #555;
 }
@@ -114,24 +152,11 @@ pre code {
 }
 
 @media (min-width: 600px) {
-  .archive-item {
-    display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    align-items: flex-end;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-  }
-
-  .archive-item-link {
-    line-height: 1.4em;
-  }
-
-  .archive-item-date {
-    text-align: right;
-    flex: 1 1 auto;
-    float: none;
-    min-width: 100px;
+  .header {
+    padding: 5em 0 1em;
+    position: relative;
+    background: transparent;
+    border-bottom: none;
   }
 
   .higlight,
