@@ -8,7 +8,7 @@
         {{ range .Pages }}
         <article class="archive-item">
             <span class="archive-item-date">
-               + {{ .Date.Format "01/02" }}
+               +{{ .Date.Format "01/02" }}
             </span>
             <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>
         </article>
