@@ -16,29 +16,26 @@ body {
 }
 
 .archive-item {
-  display: table;
-  clear: both;
+  display: flex;
   margin: 5px 0 0.5em;
   padding: 0;
 }
 
 .archive-item-date {
-  float: left;
   color: #222;
   font-family: "Lato", sans-serif;
   font-size: 21px;
+  font-weight: 300;
   padding: 5px 0;
   margin-top: 0px;
   display: block;
 }
 
 .archive-item-link {
-  float: left;
-  display: block;
   text-decoration: none;
   font-size: 21px;
   font-family: "Lato", sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   margin-left: 1em;
   color: #222;
   padding: 5px 0;
