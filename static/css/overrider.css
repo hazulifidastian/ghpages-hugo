@@ -134,6 +134,7 @@ pre code {
 
 #article-toc h2 {
   margin-top: 0;
+  text-decoration: underline;
 }
 
 #article-toc #TableOfContents a {
