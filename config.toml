@@ -2,7 +2,7 @@ baseURL = "https://hazulifidastian.id/"
 languageCode = "en-us"
 title = "Hazuli Fidastian"
 
-theme = "hugo-lithium-theme"
+theme = "hugo-mood-theme"
 disableKinds = []
 googleAnalytics = "UA-9380146-9"
 disqusShortname = "hazulifidastian"

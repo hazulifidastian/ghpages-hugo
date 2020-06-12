@@ -1,6 +1,0 @@
-[submodule "themes/hugo-lithium-theme"]
-	path = themes/hugo-lithium-theme
-	url = https://github.com/hazulifidastian/hugo-lithium-theme.git
-[submodule "public"]
-	path = public
-	url = https://github.com/hazulifidastian/hazulifidastian.github.io.git
