@@ -1,5 +1,5 @@
 ---
-title: "Django: Login dan Registrasi Bg.1"
+title: "Django: Login dan Registrasi dengan Akun Google"
 date: 2020-06-13T04:55:23+07:00
 draft: false
 tags: ["python", "django"]
