@@ -3,7 +3,7 @@ title: "Emacs 27 Dan Font Ligature"
 date: 2020-06-18T23:15:25+07:00
 draft: false
 tags: ["emacs"]
-disquss: true
+disqus: true
 ---
 
 Font ligature adalah, karakter spesial pada font yang menggabungkan beberapa karakter berdekatan menjadi satu.

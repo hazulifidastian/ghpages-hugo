@@ -8,10 +8,10 @@ disqus: true
 description: Emacs magit cheatsheet. Artikel ini akan selalu diperbarui.
 ---
 
-## My Environment
+Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode.
+Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
 
-Saya menggunakan Emacs 27, dengan framework DoomEmacs. Pastinya, saya juga mengaktifkan Evil-mode.
-Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya akan menyesuaikan dengan Evil-mode.
+Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut `M-x`.
 
 ## Shortcut
 
@@ -54,7 +54,7 @@ Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya akan meny
 |        `bl`         | Daftar branch lokal saja                                                                |
 |        `bc`         | Buat branch baru dan checkout                                                           |
 |        `bn`         | Buat branch baru tanpa checkout                                                         |
-|        `bs`         | **`magit-branch-spinoff`**. Spinoff new branch [^1][^2][^3]                             |
+|        `bs`         | **`magit-branch-spinoff`**. Spinoff new branch                                          |
 |     **Revert**      |                                                                                         |
 |         `_`         | **`magit-revert`**. Menu revert                                                         |
 |        `_O`         | **`magit-revert-and-commit`**. Revert dan commit                                        |
@@ -88,10 +88,6 @@ Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya akan meny
 |    **Lain-lain**    |                                                                                         |
 |         `$`         | Menampilkan history command yang dilakukan dimagit buffer                               |
 
-[^1]: https://magit.vc/manual/magit/Branch-Commands.html
-[^2]: https://fluca1978.github.io/2017/06/11/magit-spin-offs-anothew-way-to-name.html
-[^3]: http://blog.jenkster.com/2017/07/emacs-feature-branch-tip.html
-
 Contoh kasus kenapa kita butuh `branch new spin-off`:
 
 - Kita sedang ada dibranch master
@@ -117,3 +113,7 @@ Contoh kasus kenapa kita butuh `branch new spin-off`:
 ## Referensi
 
 - EmacsConf 2019 Magit deep dive - Jonathan Chu https://www.youtube.com/watch?v=vS7YNdl64gY
+
+- https://magit.vc/manual/magit/Branch-Commands.html
+- https://fluca1978.github.io/2017/06/11/magit-spin-offs-anothew-way-to-name.html
+- http://blog.jenkster.com/2017/07/emacs-feature-branch-tip.html
