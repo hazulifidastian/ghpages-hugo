@@ -2,7 +2,8 @@
 title: "Compiling Emacs 27 Ubuntu 18.04"
 date: 2020-05-30T16:26:37+07:00
 draft: false
-tags: ["emacs", "ubuntu", "elementary os"]
+tags: ["emacs", "elementary os"]
+disqus: true
 ---
 
 Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan
