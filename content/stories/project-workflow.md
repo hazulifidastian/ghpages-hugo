@@ -5,7 +5,10 @@ draft: false
 tags: ["github", "manajemen proyek"]
 toc: true
 disqus: true
+description: "Tulisan ini berisi gambaran mengenai alur kerja saya dalam memanajemeni sebuah proyek."
 ---
+
+## Flashback
 
 Saya pernah menggunakan [taiga.io](https://taiga.io) untuk membantu memanajemeni proyek saya. Fiturnya banyak, gratis lagi. Saya pasang di komputer personal memanajemeni proyek dalam lingkungan lokal.
 
