@@ -26,7 +26,7 @@ Jadi, kembali menentukan alur kerja proyek (project workflow) akan membantu saya
 
 ## Eksplorasi Solusi
 
-Untuk memanajemeni kode, saya tertarik dengan [GitHub Flow](https://guides.github.com/introduction/flow/) (berbeda dengan Git Flow). GitHub Flow sangat sederhana. Jika Git Flow memiliki dua _branch_ utama, master dan develop, maka Github Flow hanya memiliki satu _branch_ utama, yaitu master.
+Untuk memanajemeni kode, saya tertarik dengan [GitHub Flow](https://guides.github.com/introduction/flow/) (berbeda dengan Git Flow). GitHub Flow sangat sederhana. Jika Git Flow memiliki dua branch utama, master dan develop, maka Github Flow hanya memiliki satu branch utama, yaitu master.
 
 Aturan utamanya, kode yang ada di master, adalah kode yang siap dideploy (deployable). Setiap pengembangan fitur, perbaikan bugs dan hotfix harus bebasis dari master dan kembali digabungkan ke master.
 
@@ -103,20 +103,20 @@ Buka bagian **Projects**, pilih **Feature**. Akan terlihat kartu kecil di kolom 
 
 {{< figure src="/images/project-workflow/github-project-feature.png" caption="Project Feature" alt="Project Feature" >}}
 
-Kembali ke perangkat personal. Buat _branch_ baru pada _source code_. _Branch_ ini harus berisi nama fitur, bisa juga ditambahkan dengan nomor issue fitur yang didapat dari github.
+Kembali ke perangkat personal. Buat branch baru pada _source code_. Branch ini harus berisi nama fitur, bisa juga ditambahkan dengan nomor issue fitur yang didapat dari github.
 
 ```bash
 git checkout -b feature-#1 master
 git push origin -b feature-#1
 ```
 
-Secara berkala, perubahan pada master (jika ada) harus digabungkan kembali ke _branch_ fitur. Atasi konflik pada _source code_ jika ada.
+Secara berkala, perubahan pada master (jika ada) harus digabungkan kembali ke branch fitur. Atasi konflik pada _source code_ jika ada.
 
 ```bash
 git merge master
 ```
 
-Secara berkala, _push_ perubahan ke github.
+Secara berkala, push perubahan ke github.
 
 ```bash
 git push origin feature-#1
@@ -124,19 +124,19 @@ git push origin feature-#1
 
 #### Open Pull Request
 
-_Open pull request_ adalah permintaan untuk menggabungkan perubahan terbaru dengan _branch_ origin/master pada github.
+Open pull request adalah permintaan untuk menggabungkan perubahan terbaru dengan branch origin/master pada github.
 
-1. Klik menu pull request, lanjutkan dengan memilih base _branch_, yaitu _branch_ master. Kemudian pilih _branch_ fitur akan digabungkan
+1. Klik menu pull request, lanjutkan dengan memilih base branch, yaitu branch master. Kemudian pilih branch fitur akan digabungkan
 
    {{< figure src="/images/project-workflow/github-pull-request.png" caption="Open pull request" alt="Open pull request" >}}
 
 2. Review kode, dan berikan komentar sebagai catatan
 
-3. _Merge_ pull request
+3. Merge pull request
 
    {{< figure src="/images/project-workflow/github-merge-pull-request.png" caption="Merge pull request" alt="Merge pull request" >}}
 
-4. Hapus _branch_ feature-#1
+4. Hapus branch feature-#1
 
    {{< figure src="/images/project-workflow/github-delete-feature-branch.png" caption="Delete branch fitur" alt="Delete branch fitur" >}}
 
@@ -152,7 +152,7 @@ Klik bagian **Projects**. Pindahkan kartu feature yang baru saja selesai digabun
 
 #### Perbarui Repository lokal
 
-Setelah proses _pull request_ selesai, perbarui repository lokal untuk menyesuaikan perubahan pada repository remote di github.
+Setelah proses pull request selesai, perbarui repository lokal untuk menyesuaikan perubahan pada repository remote di github.
 
 ```bash
 git fetch
@@ -165,14 +165,14 @@ git log --oneline master origin/master  # perbedaan commit
 git diff master origin/master  # perbedaan kode
 ```
 
-Gabungkan _branch_ origin/master ke master.
+Gabungkan branch origin/master ke master.
 
 ```bash
 git checkout master
 git merge origin/master
 ```
 
-Hapus _branch_ feature.
+Hapus branch feature.
 
 ```bash
 git branch -d feature-#1
@@ -182,17 +182,17 @@ git branch -d feature-#1
 
 1. Buat issue baru. Isi input label dan project dengan nama **Bugs**
 2. Pindahkan kartu issue pada halaman **Project - Bugs** ke kolom **To do**
-3. Buat _branch_ baru pada repository lokal,
+3. Buat branch baru pada repository lokal,
 4. Pindahkan kartu issue pada halaman **Project - Bugs** ke kolom **In progress**
 5. Sesuaikan branch bug dengan perubahan pada branch master secara berkala
    ```bash
    git merge master
    ```
-6. _Push_ perubahan pada _branch_ bug secara berkala
+6. Push perubahan pada branch bug secara berkala
    ```bash
    git push origin bug-#2
    ```
-7. Open pull request _branch_ master dengan bug. Review, merge dan delete branch pull request jika sudah selesai.
+7. Open pull request branch master dengan bug. Review, merge dan delete branch pull request jika sudah selesai.
 8. Close issue bug #2, dan pindahkan kartu bug #2 pada halaman **Projects Bugs** ke kolom **Done**
 9. Perbarui repository lokal
    ```bash
