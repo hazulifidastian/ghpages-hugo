@@ -74,7 +74,7 @@ Hasilnya,
 
 {{< figure src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-1.png" caption="JetBrains Mono ligature" alt="JetBrains Mono ligature" >}}
 
-Terlihat pada gambar, hasilnya tidak memuaskan. Ada beberapa karakter yg tidak tergabung sempurna. Misal, pada karakter `===`.
+Terlihat pada gambar, hasilnya tidak memuaskan. Ada beberapa karakter yang tidak tergabung sempurna. Misal, pada karakter `===`.
 
 Lanjut dengan konfigurasi kedua dari github issue[^2], dengan sebelumnya menghapus konfigurasi dari stackexchange.
 
@@ -211,7 +211,7 @@ Beberapa saat, konfigurasi terakhir terus saya gunakan untuk aktifitas coding. S
 
 Saat membuka menu flycheck show all errors di kode python, dan saat mengakses fitur yang memanggil package helm. Kasus lainnya adalah saat saya membuka file PHP.
 
-Berkali-kali saya harus mematikan paksa emacs. Jika dipantau melalui aplikasi monitoring pada sistem operasi, emacs menghabiskan resource yg besar.
+Berkali-kali saya harus mematikan paksa emacs. Jika dipantau melalui aplikasi monitoring pada sistem operasi, emacs menghabiskan resource yang besar.
 
 Akhirnya, karena tidak memiliki opsi lain saya menghapus konfigurasi ligature terakhir dan mencoba menggunakan font kedua.
 
@@ -225,14 +225,14 @@ Ada empat cara konfigurasi yang direkomendasikan pada [halaman](https://github.c
 
 Pilihan konfigurasi pertama, [Using composition mode in Emacs Mac port](https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-composition-mode-in-emacs-mac-port) tidak bisa saya terapkan karena saya menggunakan linux.
 
-Pilihan konfigurasi kedua [
+Pilihan konfigurasi kedua, [
 Using prettify-symbols](https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-prettify-symbols), tidak menampilkan ligature apapun.
 
-Pilihan konfigurasi keempat [Using font-lock keywords](https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-font-lock-keywords) (ketiga saya lewati dulu), menampilkan karakter-karakter aneh.
+Pilihan konfigurasi keempat, [Using font-lock keywords](https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-font-lock-keywords) (ketiga saya lewati dulu), menampilkan karakter-karakter aneh.
 
 {{< figure src="/images/emacs-27-dan-font-ligature/fira-code-config-4.png" caption="Karakter aneh ligature Fira Code" alt="Karakter aneh ligature Fira Code" >}}
 
-Yang berhasil hanya konfigurasi ketiga [Using composition char table](https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-composition-char-table). Kombinasi ligature-nya muncul sempurna. Masalah pada flycheck dan package helm saat menggunakan font JetBrains Mono tidak saya temukan disini.
+Yang berhasil hanya konfigurasi ketiga, [Using composition char table](https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-composition-char-table). Kombinasi ligature-nya muncul sempurna. Masalah pada flycheck dan package helm saat menggunakan font JetBrains Mono tidak saya temukan disini.
 
 {{< figure src="/images/emacs-27-dan-font-ligature/fira-code-config-3.jpg" caption="Fira Code ligature" alt="Fira Code ligature" >}}
 
