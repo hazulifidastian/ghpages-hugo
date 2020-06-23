@@ -2,7 +2,7 @@
 title: "Project Workflow"
 date: 2020-06-19T22:04:00+07:00
 draft: false
-tags: ["github", "manajemen proyek"]
+tags: ["github", "manajemen proyek "]
 toc: true
 disqus: true
 description: "Tulisan ini berisi gambaran mengenai alur kerja saya dalam memanajemeni sebuah proyek."
