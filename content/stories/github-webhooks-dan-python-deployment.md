@@ -286,7 +286,7 @@ Fungsi `run_command()` berisi perintah untuk melakukan proses deployment. Perint
 
 Pastikan public key pada server production sudah terintegrasi dengan GitHub. Pelajari tutorial [ini](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-### Menjalankan server
+### Menjalankan Server
 
 Jalankan server menggunakan perintah dibawah ini. Terlihat dalam perintah ini disisipkan variabel environtment `GITHUB_WEBHOOKS_SECRET`.
 
