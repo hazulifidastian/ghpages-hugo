@@ -7,9 +7,9 @@ disqus: true
 tags: ["test", "python"]
 ---
 
-### Mock os.environ
+### Mocking os.environ
 
-Mocking fungsi `os.environ` saat membaca variable environment.
+Jika kode yang dites memanggil fungsi `os.environ`. Gunakan kode dibawah ini untuk melakukan mocking.
 
 ```python
 import os.environ

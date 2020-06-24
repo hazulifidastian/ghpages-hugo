@@ -146,12 +146,12 @@ Kode `httpd.serve_forever()` akan menjalankan server dan akan berhenti jika ada 
 
 ### Request Handler
 
-```python {hl_lines=[13, 32]}
+```python {hl_lines=[13, 34]}
 class ServerHandler(BaseHTTPRequestHandler):
     def _set_response(self):
         """Set response"""
         self.send_response(200)
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', 'Application/json')
         self.end_headers()
 
     def _send_response(self, message: str = '{"status": "failed"}'):
@@ -178,7 +178,9 @@ class ServerHandler(BaseHTTPRequestHandler):
                 },
             )
             payload_str = form.getvalue('payload')
-            deploy(self.headers, request_body, payload_str)
+            secret = environ['GITHUB_WEBHOOKS_SECRET']
+            github_sig = self.headers.get('X-Hub-Signature', '')
+            deploy(github_sig, secret, request_body, payload_str)
         except Exception:
             self._send_response()
             return
@@ -190,7 +192,7 @@ Bagian ini menangani request dari GitHub webhooks. Method `do_POST` akan dipangg
 Handler ini akan menangani request yang memiliki uri **/payload**, selainnya tidak akan dilayani. Method ini akan mengirimkan pesan status dalam bentuk json.
 
 ```python
-deploy(self.headers, request_body, payload_str)
+deploy(github_sig, secret, request_body, payload_str)
 ```
 
 Jika requst tidak ada masalah, maka baris kode ini akan memanggil fungsi `deploy`.
@@ -198,12 +200,12 @@ Jika requst tidak ada masalah, maka baris kode ini akan memanggil fungsi `deploy
 ### Fungsi deploy()
 
 ```python
-def deploy(headers: dict, request_body: bytes, payload_str: str):
+def deploy(github_sig: str, secret: str, request_body: bytes, payload_str: str):
     """Deploy"""
     if payload_str:
         payload = to_dict(payload_str)
         if payload:
-            if is_secure(headers, request_body) and is_deployable(payload):
+            if is_secure(github_sig, secret, request_body) and is_deployable(payload):
                 run_command()
 ```
 
@@ -217,13 +219,10 @@ Fungsi `deploy` memiliki beberapa tugas:
 ### Fungsi is_secure()
 
 ```python {hl_lines=[5 8]}
-def is_secure(headers: dict, request_body: bytes) -> bool:
+def is_secure(github_sig: str, secret: str, request_body: bytes) -> bool:
     """Check secret key on header"""
-    secret = environ['GITHUB_WEBHOOKS_SECRET']
-    github_sig = headers.get('X-Hub-Signature', '')
     hex_sig = hmac.new(secret.encode(), request_body, hashlib.sha1).hexdigest()
     expected_sig = f'sha1={hex_sig}'
-
     if hmac.compare_digest(expected_sig, github_sig):
         return True
     return False
@@ -240,7 +239,7 @@ kode ini membuat teks terenkripsi menggunakan teks rahasia yang digabungkan deng
 Cara menyisipkan variable environment saat menjalankan kode python:
 
 ```bash
-GITHUB_WEBHOOKS_SECRET="THIS IS SECRET" python3 deploy_server.py 8080
+GITHUB_WEBHOOKS_SECRET="THIS IS SECRET" python3 server.py 8080
 ```
 
 ### Fungsi is_deployable()
@@ -291,7 +290,7 @@ Pastikan public key pada server production sudah terintegrasi dengan GitHub. Pel
 Jalankan server menggunakan perintah dibawah ini. Terlihat dalam perintah ini disisipkan variabel environtment `GITHUB_WEBHOOKS_SECRET`.
 
 ```bash
-GITHUB_WEBHOOKS_SECRET="THIS IS SECRET" python3 deploy_server.py 8080
+GITHUB_WEBHOOKS_SECRET="THIS IS SECRET" python3 server.py 8080
 ```
 
 Gunakan aplikasi ngrok untuk melakukan pengetesan. Ikuti tutorial pada halaman [Using Ngrok](https://developer.github.com/webhooks/configuring/#using-ngrok). Aplikasi ngrok bisa menjembatani antara GitHub webhooks dan perangkat lokal.
@@ -300,7 +299,7 @@ Saat production, harus online dan memiliki domain atau ip address agar github bi
 
 ### Kode Lengkap
 
-Pada tulisan ini, saya tidak membahas semua kode. Kode lebih lengkap saya unggah pada github [koknggakada/deploy_server]().
+Pada tulisan ini, saya tidak membahas semua kode. Kode lebih lengkap saya unggah pada github [koknggakada/github-webhooks-payload-server](https://github.com/koknggakada/github-webhooks-payload-server). Tersedia source code server menggunakan gunicorn.
 
 ## Kesimpulan
 
