@@ -201,15 +201,15 @@ Jika requst tidak ada masalah, maka baris kode ini akan memanggil fungsi `deploy
 def deploy(headers: dict, request_body: bytes, payload_str: str):
     """Deploy"""
     if payload_str:
-        payload_json = to_json(payload_str)
-        if payload_json:
-            if is_secure(headers, request_body) and is_deployable(payload_json):
+        payload = to_dict(payload_str)
+        if payload:
+            if is_secure(headers, request_body) and is_deployable(payload):
                 run_command()
 ```
 
 Fungsi `deploy` memiliki beberapa tugas:
 
-- `to_json()`, mengkonversi data payload berupa string menjadi json dengan tipe data dict
+- `to_dict()`, mengkonversi data payload berupa string berisi json menjadi tipe data dict
 - `is_secure()`, menvalidasi teks rahasia terenkripsi. Yang diinputkan pada bidang isian **Secret** saat konfigurasi webhooks
 - `is_deployable()`, melakukan filter payload dan menentukan aktifitas dari event yang bisa memicu proses deployment
 - `run_command()`, akan menjalankan perintah deployment
@@ -246,17 +246,17 @@ GITHUB_WEBHOOKS_SECRET="THIS IS SECRET" python3 deploy_server.py 8080
 ### Fungsi is_deployable()
 
 ```python
-def is_deployable(payload_json: dict) -> bool:
+def is_deployable(payload: dict) -> bool:
     """
     Cek is deployable. Push or merge pull request
     on branch master
     """
-    is_push_to_master = payload_json.get('ref', '') == 'refs/heads/master'
+    is_push_to_master = payload.get('ref', '') == 'refs/heads/master'
     try:
         is_merge_pr_to_master = (
-            payload_json['action'] == 'closed'
-            and payload_json['pull_request']['merged'] is True
-            and payload_json['pull_request']['base']['ref'] == 'master'
+            payload['action'] == 'closed'
+            and payload['pull_request']['merged'] is True
+            and payload['pull_request']['base']['ref'] == 'master'
         )
     except KeyError:
         is_merge_pr_to_master = False
