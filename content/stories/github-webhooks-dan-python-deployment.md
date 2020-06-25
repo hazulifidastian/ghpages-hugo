@@ -103,7 +103,7 @@ Konfigurasi webhooks pada halaman **Settings** pada repository. Kita bahas satu 
   - Pushes dan
   - Pull Requests
 
-Simpan konfigurasi diatas. Selanjunya akan dibahas pemasangan server.
+Simpan konfigurasi diatas. Selanjutnya akan dibahas pemasangan server.
 
 ## Source Code Server
 
