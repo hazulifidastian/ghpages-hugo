@@ -1,5 +1,5 @@
 ---
-title: "Python Mock & Patch"
+title: "Python Mock dan Patch"
 date: 2020-06-24T12:11:00+07:00
 draft: false
 toc: true

@@ -1,5 +1,5 @@
 ---
-title: "Lightline & winwidth Nvim"
+title: "Lightline dan winwidth Nvim"
 date: 2020-03-09T11:51:46+07:00
 draft: false
 tags: ["nvim", "lightline"]

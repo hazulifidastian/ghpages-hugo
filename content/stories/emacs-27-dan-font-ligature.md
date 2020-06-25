@@ -1,5 +1,5 @@
 ---
-title: "Emacs 27 Dan Font Ligature"
+title: "Emacs 27 dan Font Ligature"
 date: 2020-06-18T23:15:25+07:00
 draft: false
 tags: ["emacs"]
