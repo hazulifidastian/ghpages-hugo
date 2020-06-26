@@ -1,5 +1,5 @@
 ---
-title: "Python Mock dan Patch"
+title: "Python Mock dan Stub"
 date: 2020-06-24T12:11:00+07:00
 draft: false
 toc: true
@@ -19,3 +19,7 @@ from unittest import mock
 def test_foo():
     foo()
 ```
+
+### Referensi
+
+- https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub
