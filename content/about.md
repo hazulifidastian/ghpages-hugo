@@ -15,4 +15,4 @@ Ingin membicarakan proyek? Hubungi saya melalui [email](mailto:hazulifidastian@l
 Catatan:
 
 - **Doodle**: Sketsa oleh [Wiwin](https://medium.com/@inggilwindiarti).
-- **Template**: Based on [Hugo Lithium](https://github.com/jrutheiser/hugo-lithium-theme).
+- **Template**: Based on [Hugo Mood](https://github.com/hazulifidastian/hugo-mood-theme).
