@@ -49,6 +49,8 @@ disqusShortname = "hazulifidastian"
         lineNumbersInTable = true
         noClasses = true
         style = "monokailight"
+    [markup.goldmark.renderer]
+        unsafe= true
     [markup.tableOfContents]
         endLevel = 3
         ordered = false

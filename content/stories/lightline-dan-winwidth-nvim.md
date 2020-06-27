@@ -13,20 +13,20 @@ Statusline bisa menampilkan informasi dalam beberapa bagian. Bisa berisi mode vi
 dari file, posisi kursor, dll.
 
 Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin
-Lightline[^1]. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah
+Lightline[^1]. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa dengan mudah
 mengatur tema untuk memper-indah tampilan status.
 
 [^1]: https://github.com/itchyny/lightline.vim
 
-Kendala yang saya alami saat menggunakan Lightline adalah, ketika saya mengecilkan terminal.
-Atau, ketika saya membagi window menjadi beberapa bagian horizontal (split horizontal). Informasi
-yang saya prioritaskan untuk saya lihat, menghilang dari statusline. Yang tampil malah informasi
-yang tidak saya prioritaskan.
+Kendala yang dialami saat menggunakan Lightline adalah, ketika saya mengecilkan terminal.
+Atau, ketika membagi window menjadi beberapa bagian horizontal (split horizontal). Informasi
+yang diprioritaskan untuk dilihat menghilang dari statusline. Yang tampil justru informasi
+yang tidak diprioritaskan.
 
 Tulisan ini membahas bagaimana cara mengatur informasi yang tampil pada statusline tersebut.
 Terutama ketika window memiliki ruang horizontal yang sempit.
 
-**Konfigurasi**
+### Konfigurasi
 
 Ketika kita menginisiasi lightline, kita akan mengatur variabel tipe dictionaries dengan
 nama `g:lightline`, dan dengan key `component_function`.
@@ -62,7 +62,7 @@ Ketika akan menampilkan `gitbranch`, maka fungsi `LightlineFugitiveHead` akan di
 maka fungsi `LightlineCocStatus` yang akan dieksekusi.
 
 Pada contoh pengaturan diatas, kita sebenarnya membuat fungsi sendiri dengan nama, `LightlineFugitiveHead`,
-dan `LightlineCocStatus`. Didalam fungsi inilah kita mengatur mekanisme untuk menampilkan
+dan `LightlineCocStatus`. Didalam fungsi inilah diatur mekanisme untuk menampilkan
 informasi pada statusline.
 
 ```viml
@@ -98,16 +98,16 @@ lebar minimal window adalah `120`.
 Jika lebar window lebih besar, maka bagian `gitbranch` dan `cocstatus` akan ditampilkan.
 Jika lebih kecil, maka `gitbranch` dan `cocstatus` akan disembunyikan.
 
-**Kesimpulan**
+### Kesimpulan
 
-Dengan memadukan fungsi `winwidth` dan fleksibilitas plugin lightline, kita dengan mudah
+Dengan memadukan fungsi `winwidth` dan fleksibilitas plugin lightline, memudahkan
 mengatur informasi apa saja yang tampil pada statusline dalam kondisi lebar window
 tertentu.
 
 Konfigurasi diatas tidak hanya digunakan untuk menampilkan `gitbranch` dan `cocstatus` saja.
-Bisa menyesuaikan dengan kebutuhan sendiri dan untuk bagian-bagian statusline yang lain.
+Bisa disesuaikan dengan kebutuhan sendiri dan bagian statusline yang lain.
 
 Fungsi `winwidth` dari Nvim membantu kita untuk menentukan lebar window pada sebuah buffer.
 
-Untuk melihat konfigurasi lengkap saya untuk lightline, bisa ikuti
+Untuk melihat konfigurasi lengkap saya untuk lightline, bisa lihat pada
 [tautan ini](https://github.com/hazulifidastian/dotfiles/blob/master/.config/nvim/init.vim.d/plugins.d/lightline.vim).

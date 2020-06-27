@@ -13,7 +13,7 @@ seperti `pyenv` pada python, `rbenv` pada ruby atau `nvm` pada
 nodejs tetapi all in one. `asdf` bisa menangani semuanya, khususnya
 bahasa pemrograman populer.
 
-Pada perkembangan, `asdf` tidak hanya digunakan untuk bahasa
+Pada perkembangannya, `asdf` tidak hanya digunakan untuk bahasa
 pemgrograman saja. Ada plugin yang bisa memanajemeni
 database seperti mysql dan postgresql, redis, bahkan text editor neovim.
 
@@ -56,7 +56,7 @@ ke direktori `~/.asdf`. Baris keduanya digunakan untuk
 pindah ke direktori `~/.asdf`.
 
 Pada perintah ketiga, git akan melakukan checkout ke versi terakhir `asdf`
-yang definisikan oleh tag pada repositori git.
+yang didefinisikan oleh tag pada repositori git.
 
 **Integrasi dengan shell**
 
@@ -197,7 +197,7 @@ miniconda3-4.7.1
 
 Paket versi berapa yang harus dipasang?
 
-Itu tergantung dengan kebutuhan Anda, contoh.
+Itu tergantung dengan kebutuhan Anda, contoh:
 
 - Ingin bereksperimen dengan python versi terbaru
 - Atau ingin bereksperimen dengan versi yang sedang dikembangkan (dev).
@@ -375,8 +375,8 @@ Di direktori tersebut, `asdf` membuat file `.tool-versions` berisi,
 python 3.8.3
 ```
 
-Jika project tidak hanya menggunakan python, misalnya juga menggunakan nodejs. Gunakan perintah untuk menerapkan versi
-lokal nodejs di direktori tersebut. Namun, pastikan plugin nodejs dan paketnya sudah terpasang.
+Jika project menggunakan python untuk backend dan nodejs pada frontend. Gunakan perintah untuk menerapkan versi
+lokal nodejs di direktori tersebut. Pastikan plugin nodejs dan paketnya sudah terpasang.
 
 ```bash
 asdf local nodejs 12.16.3
@@ -393,63 +393,218 @@ nodejs 12.16.3
 
 ### PHP
 
+Pemasangan plugin dan paket PHP.
+
+**Dependensi**
+
+```bash
+apt install -y libxml2-dev libcurl4-gnutls-dev libzip-dev \
+    icu-devtools libicu-dev ibjpeg-dev libmcrypt-dev \
+    libreadline-dev
+```
+
+**Memasang Plugin dan Paket**
+
+```bash
+asdf plugin add php
+
+# daftar paket php
+asdf list all php
+
+# versi stabil terakhir
+asdf latest php
+
+# pasang versi stabil terakhir
+asdf install latest php
+
+# pasang versi 7 stabil terakhir
+asdf install latest php 7
+
+# daftar paket yang terpasang
+asdf list php
+
+# set versi global
+asdf global php <versi pilihan>
+```
+
+Informasi lengkap plugin PHP bisa dilihat di repositori [asdf-community/asdf-php](https://github.com/asdf-community/asdf-php)
+
 ### Erlang
+
+Pemasangan plugin dan paket Erlang.
+
+**Dependensi**
+
+```bash
+apt-get -y install build-essential autoconf m4 libncurses5-dev \
+    libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev \
+    libpng-dev libssh-dev unixodbc-dev xsltproc fop \
+    libxml2-utils libncurses-dev openjdk-11-jdk
+```
+
+**Memasang Plugin dan Paket**
+
+```bash
+asdf plugin add erlang
+
+# daftar paket erlang
+asdf list all erlang
+
+# versi stabil terakhir
+asdf latest erlang
+
+# pasang versi stabil terakhir
+asdf install latest erlang
+
+# pasang versi 22 stabil terakhir
+asdf install latest erlang 22
+
+# daftar paket yang terpasang
+asdf list erlang
+
+# set versi global
+asdf global erlang <versi pilihan>
+```
+
+Informasi lengkap plugin Erlang bisa dilihat di repositori [asdf-erlang](https://github.com/asdf-vm/asdf-erlang)
 
 ### Elixir
 
+Pemasangan plugin dan paket Elixir.
+
+**Dependensi**
+
+Elixir membutuhkan aplikasi unzip.
+
+```bash
+apt install unzip
+```
+
+Elixir juga membutuhkan Erlang. Sebelum pemasangan Elixir, pasang paket Erlang menggunakan `asdf` terlebih dahulu.
+
+**Kompatibilitas dengan Erlang**
+
+Informasi kompatibilitas antara Elixir dan Erlang bisa dilihat di halaman [Compatibility between Elixir and Erlang/OTP ](https://hexdocs.pm/elixir/master/compatibility-and-deprecations.html#compatibility-between-elixir-and-erlang-otp).
+
+**Pemasangan plugin dan paket Elixir**
+
+```bash
+asdf plugin add elixir
+
+# daftar paket elixir
+asdf list all elixir
+
+# versi stabil terakhir
+# tergantung dengan versi erlang
+# yang ada pada sistem operasi
+asdf latest elixir
+
+# pasang versi stabil terakhir
+# tergantung dengan versi erlang
+# yang ada pada sistem operasi
+asdf install latest elixir
+
+# pasang versi 1.9 stabil terakhir
+asdf install latest elixir 1.9
+
+# daftar paket yang terpasang
+asdf list elixir
+
+# set versi global
+asdf global elixir <versi pilihan>
+```
+
+Informasi lengkap plugin Elixir bisa dilihat di repositori [asdf-elixir](https://github.com/asdf-vm/asdf-elixir)
+
 ### Ruby
 
-### PostgreSql
+Pemasangan plugin dan paket Ruby.
 
-## Cheatsheet
+**Dependensi**
 
-Berikut daftar opsi yang bisa digunakan pada perintah `asdf`.
+```bash
+apt-get install autoconf bison build-essential libssl-dev \
+    libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev \
+    libffi-dev libgdbm6 libgdbm-dev libdb-dev
+```
 
-**Manajemen plugin**
+Referensi dependensi bisa dilihat di halaman [Suggested build environment](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment).
 
-|                             |                                                    |
-| :-------------------------- | :------------------------------------------------- |
-| `asdf list`                 | daftar plugin beserta versi yang terpasang         |
-| `asdf plugin list all`      | daftar seluruh plugin                              |
-| `asdf plugin list`          | daftar plugin yang terpasang di perangkat personal |
-| `asdf plugin list --urls`   | daftar plugin yang terpasang beserta urlnya        |
-| `asdf plugin add python`    | pasang plugin python                               |
-| `asdf plugin remove python` | copot plugin python                                |
-| `asdf plugin update python` | perbarui plugin python                             |
-| `asdf plugin update --all`  | perbarui seluruh plugin                            |
+**Memasang Plugin dan Paket**
 
-**Manajemen paket**
+```bash
+asdf plugin add ruby
 
-|                                  |                                         |
-| :------------------------------- | :-------------------------------------- |
-| `asdf list all python`           | daftar versi python yang bisa dipasang  |
-| `asdf latest python`             | versi stabil terakhir python            |
-| `asdf latest python` 3.8         | versi stabil terakhir python 3.8        |
-| `asdf install python 3.7.7`      | pasang python versi 3.7.7               |
-| `asdf install python 3.8.3`      | pasang python versi 3.8.3               |
-| `asdf install latest python`     | pasang python versi stabil terakhir     |
-| `asdf install latest python 3.8` | pasang versi stabil terakhir python 3.8 |
-| `asdf uninstall python 3.7.7`    | copot python versi 3.7.7                |
-| `asdf uninstall python 3.8.3`    | copot python versi 3.8.3                |
-| `asdf list python`               | daftar versi python yang terpasang      |
+# daftar paket ruby
+asdf list all ruby
 
-**Utilitas**
+# versi stabil terakhir
+asdf latest ruby
 
-|                            |                                        |
-| :------------------------- | :------------------------------------- |
-| `asdf global python 3.7.7` | menjadikan python 3.7.7 global runtime |
-| `asdf current`             | daftar plugin beserta versi globalnya  |
-| `asdf reshim python 3.7.7` | Re-create shim                         |
-| `asdf update`              | perbarui asdf ke versi stabil terakhir |
+# pasang versi stabil terakhir
+asdf install latest ruby
 
-`python` pada tabel diatas adalah nama plugin, bisa dirubah menyesuaikan plugin masing-masing.
+# pasang versi 2 stabil terakhir
+asdf install latest ruby 2
+
+# daftar paket yang terpasang
+asdf list ruby
+
+# set versi global
+asdf global ruby <versi pilihan>
+```
+
+Informasi lengkap plugin Ruby bisa dilihat di repositori [asdf-ruby](https://github.com/asdf-vm/asdf-ruby)
+
+### Node.js
+
+Pemasangan plugin dan paket Node.js.
+
+**Dependensi**
+
+```bash
+apt-get install dirmngr gpg
+```
+
+Referensi dependensi bisa dilihat di halaman [Suggested build environment](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment).
+
+**Memasang Plugin dan Paket**
+
+```bash
+asdf plugin add nodejs
+
+# impor keyring
+# https://github.com/asdf-vm/asdf-nodejs#install
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+
+# daftar paket ruby
+asdf list all nodejs
+
+# versi stabil terakhir
+asdf latest nodejs
+
+# pasang versi stabil terakhir
+asdf install latest nodejs
+
+# pasang versi 12 stabil terakhir
+asdf install latest nodejs 12
+
+# daftar paket yang terpasang
+asdf list nodejs
+
+# set versi global
+asdf global nodejs <versi pilihan>
+```
+
+Informasi lengkap plugin Node.js bisa dilihat di repositori [asdf-nodejs](https://github.com/asdf-vm/asdf-nodejs)
 
 ## Kesimpulan
 
-```
+`asdf` memudahkan developer untuk memanajemeni banyak versi dari bahasa pemrograman didalam satu sistem.
 
-```
+Versi global, adalah versi yang bisa diakses oleh seluruh sistem. Sedangkan versi lokal adalah
+versi khusus untuk direktori tertentu. Versi lokal ditandai dengan keberadaan file `.tool-versions`.
 
-```
-
-```
+Plugins adalah cara `asdf` memahami bagaimana menangani paket yang berbeda.
+Plugin python untuk bahasa pemrograman python, ada erlang, elixir dan lain sebagainya. Plugin harus
+dipasang terlebih dahulu sebelum menggunakannya.
