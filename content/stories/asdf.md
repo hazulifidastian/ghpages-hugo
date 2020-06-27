@@ -1,7 +1,7 @@
 ---
 title: "asdf"
 date: 2020-06-26T10:24:41+07:00
-draft: true
+draft: false
 toc: true
 tags: ["asdf"]
 description: "TODO"

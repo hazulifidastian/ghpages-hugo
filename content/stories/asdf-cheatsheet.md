@@ -1,7 +1,7 @@
 ---
 title: "asdf Cheatsheet"
 date: 2020-06-27T05:29:47+07:00
-draft: true
+draft: false
 tags: ["asdf"]
 ---
 
