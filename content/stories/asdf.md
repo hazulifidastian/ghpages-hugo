@@ -4,7 +4,11 @@ date: 2020-06-26T10:24:41+07:00
 draft: false
 toc: true
 tags: ["asdf"]
-description: "TODO"
+description: "Apakah saat ini Anda memanajemeni banyak versi bahasa pemrograman
+dalam satu perangkat? Tidak menyukai berpindah-pindah antar tools, dan hanya
+ingin satu tool saja untuk mengatur semuanya? Berarti tulisan ini cocok untuk Anda.
+Saya akan berbagi pengalaman menggunakan aplikasi asdf, mungkin ini bisa membantu
+pekerjaan Anda."
 ---
 
 `asdf` adalah command line interface (CLI) yang digunakan untuk
@@ -390,6 +394,9 @@ nodejs 12.16.3
 ```
 
 ## Plugin Lainnya
+
+Saya hanya akan membahas beberapa plugin saja. Daftar lengkapnya bisa dilihat di halaman
+[asdf plugins repository](https://asdf-vm.com/#/plugins-all).
 
 ### PHP
 
