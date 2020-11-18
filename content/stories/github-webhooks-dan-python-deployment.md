@@ -1,5 +1,5 @@
 ---
-title: "GitHub Webhooks & Python Deployment"
+title: "GitHub Webhooks dan Python Deployment"
 date: 2020-06-22T22:58:05+07:00
 draft: false
 disqus: true

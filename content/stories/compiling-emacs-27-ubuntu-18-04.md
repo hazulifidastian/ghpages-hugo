@@ -25,6 +25,7 @@ tar -xzf emacs-27.0.91.tar.gz
 
 # Konfigurasi dan install emacs
 cd emacs-27.0.91
+./autogen.sh
 ./configure
 make
 make install
