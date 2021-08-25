@@ -10,4 +10,4 @@ git push origin master
 # On public folder, Commit and push
 git -C public add .
 git -C public commit -m "Rebuilding site"
-git -C push origin master
+git -C public push origin master

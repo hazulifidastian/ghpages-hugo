@@ -12,4 +12,4 @@ hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 # On public folder, Commit and push
 git -C public add .
 git -C public commit -m "Rebuilding site"
-git push origin master
+git -C public push origin master
