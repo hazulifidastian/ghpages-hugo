@@ -4,11 +4,7 @@ date: 2020-06-26T10:24:41+07:00
 draft: false
 toc: true
 tags: ["asdf"]
-description: "Apakah saat ini Anda memanajemeni banyak versi bahasa pemrograman
-dalam satu perangkat? Tidak menyukai berpindah-pindah antar tools, dan hanya
-ingin satu tool saja untuk mengatur semuanya? Berarti tulisan ini cocok untuk Anda.
-Saya akan berbagi pengalaman menggunakan aplikasi asdf, mungkin ini bisa membantu
-pekerjaan Anda."
+description: "One tool to rule them all. Satu tool yang berguna untuk mengatur versi bahasa pemrograman."
 ---
 
 `asdf` adalah command line interface (CLI) yang digunakan untuk
