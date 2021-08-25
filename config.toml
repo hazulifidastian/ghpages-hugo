@@ -32,8 +32,8 @@ disqusShortname = "hazulifidastian"
 
     [params.logo]
     url = "logo.png"
-    width = 50
-    height = 50
+    width = 80
+    height = 80
     alt = "Logo"
 
     [params.icon]
