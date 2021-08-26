@@ -51,3 +51,11 @@ Referensi:
 
 - [git-diff](https://git-scm.com/docs/git-diff)
 - [gitrevision](https://git-scm.com/docs/gitrevisions)
+
+### Force Push yang Aman
+
+Force push dengan metode ini memastikan tidak akan menimpa/overwrite pekerjaan tim yang lain pada branch remote. Jika branch remote sudah ada commit yang lain force push akan dibatalkan.
+
+```bash
+git push --force-with-lease origin master
+```
