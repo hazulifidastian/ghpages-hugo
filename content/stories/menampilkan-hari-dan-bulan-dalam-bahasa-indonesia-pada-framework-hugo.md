@@ -1,5 +1,5 @@
 ---
-title: "Hari dan Bulan Dalam Bahasa Indonesia Pada Framework Hugo"
+title: "Menampilkan Hari dan Bulan dalam Bahasa Indonesia pada Framework Hugo"
 date: 2021-08-27T01:27:41+07:00
 draft: false
 description: "Cara menampilkan nama hari dan nama bulan dalam bahasa Indonesia pada framework Hugo"
