@@ -4,6 +4,7 @@ date: 2021-08-26T21:06:01+07:00
 draft: false
 disqus: true
 description: "Strategi paranoid untuk merge (menggabungkan) dua branch git yang konflik."
+tags: ["git"]
 ---
 
 Saya termasuk orang yang paranoid saat melihat dua branch git yang akan digabungkan terdapat banyak konflik. Sudah terbayang kesulitan untuk memilih, memilah bagian kode mana yang akan dipakai. Apalagi jika file yang konflik ada banyak, ditambah selisih waktu antar branch juga panjang.
