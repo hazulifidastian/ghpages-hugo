@@ -1,6 +1,5 @@
 baseURL = "https://hazulifidastian.github.io/"
 languageCode = "id-id"
-DefaultContentLanguage = "id"
 title = "Hazuli Fidastian"
 
 theme = "hugo-mood-theme"
@@ -29,6 +28,7 @@ disqusShortname = "hazulifidastian"
 
     description = "Nama saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
 
+    defaultContentLanguage = "id"
 
     # path to the favicon, under "static"
     favicon = "favicon.ico"
@@ -61,14 +61,3 @@ disqusShortname = "hazulifidastian"
 
 [permalinks]
     stories = "/:filename"
-
-[languages]
-  [languages.id]
-    languageName = "Indonesia"
-    languageCode = "id-id"
-    weight = 1
-
-  [languages.en]
-    languageName = "English"
-    languageCode = "en-us"
-    weight = 2
