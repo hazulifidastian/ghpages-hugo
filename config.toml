@@ -10,6 +10,7 @@ disqusShortname = "hazulifidastian"
 
 [Author]
   name = "Hazuli Fidastian"
+  bio = "Nama saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
 
 [[menu.main]]
     identifier = "about"
@@ -26,7 +27,8 @@ disqusShortname = "hazulifidastian"
 [params]
     mainSections = ["stories"]
 
-    description = "Website personal Hazuli Fidastian."
+    description = "Nama saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
+
 
     # path to the favicon, under "static"
     favicon = "favicon.ico"
