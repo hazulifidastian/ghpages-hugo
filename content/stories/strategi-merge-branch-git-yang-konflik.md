@@ -6,9 +6,13 @@ disqus: true
 description: "Strategi paranoid untuk merge (menggabungkan) dua branch git yang konflik."
 ---
 
-Saya termasuk orang yang paranoid saat melihat dua branch git yang akan digabungkan terdapat konflik. Sudah terbayang kesulitan untuk memilih, memilah bagian kode mana yang akan dipakai. Apalagi jika banyak file yang konflik ditambah selisih waktu antar branch juga panjang.
+Saya termasuk orang yang paranoid saat melihat dua branch git yang akan digabungkan terdapat banyak konflik. Sudah terbayang kesulitan untuk memilih, memilah bagian kode mana yang akan dipakai. Apalagi jika file yang konflik ada banyak, ditambah selisih waktu antar branch juga panjang.
 
-Untuk mempermudah proses pengabungan, saya menggunakan feature magit emacs `magit-file-checkout`. Saya akan mengambil satu persatu file yang konflik dari branch master ke branch feature atau bugs, dan saya selesaikan konfliknya. Saya biasa menggunakan magit emacs sebagai interface untuk menjalankan perintah git, jika ada waktu saya akan tuliskan juga perintah-perintah jika menggunakan plain git.
+Jika menggunakan metode biasa, misalnya dengan langsung merge branch feature atau bugs ke branch master, saya cenderung panik terus bingung mau mulai dari mana karena melihat banyaknya file yang konflik.
+
+Jika Anda senasib dengan saya, mungkin Anda bisa mempertimbangkan strategi paranoid ini. Cara ini mungkin lebih ribet, namun bisa menjamin ketenangan hidup Anda.
+
+Untuk mempermudah proses pengabungan, saya menggunakan feature magit emacs `magit-file-checkout`. Saya akan mengambil satu persatu file yang konflik dari branch master ke branch feature atau bugs, kemudian saya selesaikan konfliknya. Oh iya, saya biasa menggunakan magit emacs sebagai interface untuk menjalankan perintah git, jika ada waktu saya akan tuliskan juga perintah-perintah jika menggunakan plain git.
 
 Detail urutannya adalah:
 
