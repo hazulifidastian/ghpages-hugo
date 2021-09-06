@@ -24,7 +24,7 @@ disqusShortname = "hazulifidastian"
     weight = 3
 
 [params]
-    mainSections = ["stories"]
+    mainSections = ["stories", "apps"]
 
     description = "Nama saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
 
