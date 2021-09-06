@@ -1,10 +1,10 @@
 ---
 title: "WhatsApp Link"
 date: 2021-09-06T14:07:21+07:00
-draft: true
+draft: false
 tags: ['app', 'alpinejs', 'whastapp']
+description: "Membuat link WhatsApp Me dengan menggabungkan api WhatsApp untuk mengirimkan pesan melalui browser, kemudian nomor telepon tujuan dan pesan."
 ---
-
 Membuat link WhatsApp Me dengan menggabungkan api WhatsApp untuk mengirimkan pesan melalui browser, kemudian nomor telepon tujuan dan pesan.
 
 <div id="app" x-data="{ phoneNumber: '', message: '' }">
