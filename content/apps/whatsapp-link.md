@@ -1,0 +1,29 @@
+---
+title: "WhatsApp Link"
+date: 2021-09-06T14:07:21+07:00
+draft: true
+tags: ['app', 'alpinejs', 'whastapp']
+---
+
+Membuat link WhatsApp Me dengan menggabungkan api WhatsApp untuk mengirimkan pesan melalui browser, kemudian nomor telepon tujuan dan pesan.
+
+<div id="app" x-data="{ phoneNumber: '', message: '' }">
+    <label for="phoneNumber">NOMOR TELEPON</label>
+    <input x-model="phoneNumber" type="text" id="phoneNumber" placeholder="Nomor telepon, gunakan awalan +62 untuk indonesia">
+    <label for="message">PESAN</label>
+    <textarea x-model="message" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
+    <label for="link">LINK</label>
+    <textarea 
+        x-text="
+        'https://api.whatsapp.com/send?phone=' + phoneNumber.replace(/[^\d]/g,'') + '&text=' + encodeURI(message)
+        " 
+        name="link" 
+        id="link" 
+        rows="3" 
+        placeholder="Link terisi otomatis" 
+        readonly></textarea>
+    <p class="small">Salin teks diatas untuk dijadikan url.</p>
+</div>
+
+<script src="//unpkg.com/alpinejs" defer></script>
+
