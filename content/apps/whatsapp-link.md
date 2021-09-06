@@ -8,6 +8,9 @@ description: "Membuat link WhatsApp Me dengan menggabungkan api WhatsApp, nomor 
 Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi 
 pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.
 
+Aplikasi ini dibuat reaktif menggunakan AlpineJs. Otomatis memantau perubahan pada input nomor telepon
+dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.
+
 <div id="app" x-data="{ phoneNumber: '', message: '' }">
     <label for="phoneNumber">NOMOR TELEPON</label>
     <input x-model="phoneNumber" type="text" id="phoneNumber" placeholder="Nomor telepon, gunakan awalan +62 untuk indonesia">
