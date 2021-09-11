@@ -1,0 +1,19 @@
+---
+title: "SHA1 Hash Generator"
+date: 2021-09-11T17:52:02+07:00
+draft: false
+tags: ['app', 'js', 'alpinejs']
+description: "Membuat link WhatsApp Me dengan menggabungkan api WhatsApp, nomor WhatsApp tujuan, dan pesan."
+---
+
+
+<div id="app" x-data="{ text: '', hash: '' }">
+    <label for="text">TEKS</label>
+    <input x-model="text" @keyup="hash = CryptoJS.SHA1(text)" type="text" id="text" placeholder="Isikan dengan teks">
+    <label for="hash">MD5 HASH</label>
+    <input x-model='hash' type="text" id="hash" placeholder="" readonly>
+</div>
+
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js" integrity="sha512-t8vdA86yKUE154D1VlNn78JbDkjv3HxdK/0MJDMBUXUjshuzRgET0ERp/0MAgYS+8YD9YmFwnz6+FWLz1gRZaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha1.min.js" integrity="sha512-NHw1e1pc4RtmcynK88fHt8lpuetTUC0frnLBH6OrjmKGNnwY4nAnNBMjez4DRr9G1b+NtufOXLsF+apmkRCEIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
