@@ -26,7 +26,17 @@ dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
         rows="3" 
         placeholder="Link terisi otomatis" 
         readonly></textarea>
-    <p class="small">Salin teks diatas untuk dijadikan url.</p>
+    <p class="small">
+        <button type="button" @click="$clipboard(hash)">Salin ke Clipboard</button>
+        Salin teks diatas untuk dijadikan url.
+    </p>
 </div>
 
 <script src="//unpkg.com/alpinejs" defer></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.magic('clipboard', () => {
+            return subject => navigator.clipboard.writeText(subject)
+        });
+    });
+</script>
