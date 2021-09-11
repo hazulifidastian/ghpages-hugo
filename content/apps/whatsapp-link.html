@@ -11,15 +11,15 @@ pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang a
 <p>Aplikasi ini dibuat reaktif menggunakan AlpineJs. Otomatis memantau perubahan pada input nomor telepon
 dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
 
-<div id="app" x-data="{ phoneNumber: '', message: '' }">
+<div id="app" x-data="{ phoneNumber: '', message: '', generatedLink: '' }">
     <label for="phoneNumber">NOMOR TELEPON</label>
     <input x-model="phoneNumber" type="text" id="phoneNumber" placeholder="Nomor telepon, gunakan awalan +62 untuk indonesia">
     <label for="message">PESAN</label>
     <textarea x-model="message" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
     <label for="link">LINK</label>
     <textarea 
-        x-text="
-        'https://api.whatsapp.com/send?phone=' + phoneNumber.replace(/[^\d]/g,'') + '&text=' + encodeURI(message)
+        x-text="generatedLink =
+        'https://api.whatsapp.com/send?phone=' + '+' + phoneNumber.replace(/[^\d]/g,'') + '&text=' + encodeURI(message)
         " 
         name="link" 
         id="link" 
@@ -30,6 +30,10 @@ dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
         <button type="button" @click="$clipboard(link)">Salin ke Clipboard</button>
         Salin teks diatas untuk dijadikan url.
     </p>
+    <div x-show="phoneNumber.length > 9 && message !== ''">
+        <label for="aLink">LINK YANG BISA DIKLIK</label><br>
+        <a id="aLink" :href="generatedLink">Klik disini untuk langsung mengirimkan pesan</a>
+    </div>
 </div>
 
 <script src="//unpkg.com/alpinejs" defer></script>

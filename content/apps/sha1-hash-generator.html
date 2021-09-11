@@ -16,7 +16,7 @@ description: "Membuat hash dengan algoritma kriptografi SHA1"
     <input x-model="text" @keyup="hash = CryptoJS.SHA1(text)" type="text" id="text" placeholder="Isikan dengan teks">
     <label for="hash">MD5 HASH</label>
     <input x-model='hash' type="text" id="hash" placeholder="" readonly>
-    <button type="button" @click="$clipboard(hash)">Salin ke Clipboard</button>
+    <p class="small"><button type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
 </div>
 
 <script src="//unpkg.com/alpinejs" defer></script>
