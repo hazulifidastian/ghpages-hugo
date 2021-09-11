@@ -3,9 +3,13 @@ title: "MD5 Hash Generator"
 date: 2021-09-11T17:09:08+07:00
 draft: false
 tags: ['app', 'js', 'alpinejs']
-description: "Membuat link WhatsApp Me dengan menggabungkan api WhatsApp, nomor WhatsApp tujuan, dan pesan."
+description: "Membuat hash dengan algoritma kriptografi MD5"
 ---
 
+<p>
+    Apa itu hash<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+    dan MD5<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+</p>
 
 <div id="app" x-data="{ text: '', hash: '' }">
     <label for="text">TEKS</label>
@@ -17,3 +21,15 @@ description: "Membuat link WhatsApp Me dengan menggabungkan api WhatsApp, nomor 
 <script src="//unpkg.com/alpinejs" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js" integrity="sha512-t8vdA86yKUE154D1VlNn78JbDkjv3HxdK/0MJDMBUXUjshuzRgET0ERp/0MAgYS+8YD9YmFwnz6+FWLz1gRZaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.min.js" integrity="sha512-3sGbaDyhjGb+yxqvJKi/gl5zL4J7P5Yh4GXzq+E9puzlmVkIctjf4yP6LfijOUvtoBI3p9pLKia9crHsgYDTUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<section class="footnotes" role="doc-endnotes">
+    <hr>
+    <ol>
+        <li id="fn:1" role="doc-endnote">
+            <p><a href="https://id.wikipedia.org/wiki/Hash">https://id.wikipedia.org/wiki/Hash</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:2" role="doc-endnote">
+            <p><a href="https://id.wikipedia.org/wiki/MD5">https://id.wikipedia.org/wiki/MD5</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+    </ol>
+</section>
