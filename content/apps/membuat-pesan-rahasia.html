@@ -1,0 +1,87 @@
+---
+title: "Membuat Pesan Rahasia"
+date: 2021-09-12T04:48:47+07:00
+draft: false
+tags: ['app', 'js', 'alpinejs', 'CryptoJS']
+description: "Membuat pesan rahasia menggunakan 4 pilihan algoritma enkripsi"
+---
+
+<p>
+    Membuat pesan rahasia menggunakan empat algoritma pilihan yaitu AES<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, 
+    TripleDES<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, 
+    Rabbit<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> dan
+    RC4Drop<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.
+</p>
+
+<p>
+    Aplikasi ini dibuat menggunakan library AlpineJS<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>
+    dan CryptoJS<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.
+</p>
+
+<div id="app" x-data="{ algo: 'aes', message: '', secret: '', encrypted: '' }">
+    <label for="algo">ALGORITMA</label>
+    <select x-model='algo' name="algo" id="algo">
+        <option value="aes" selected>AES</option>
+        <option value="tripledes">TripleDES</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="rc4drop">RC4Drop</option>
+    </select>
+    <label for="message">PESAN</label>
+    <textarea x-model="message" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
+    <label for="secret">KUNCI RAHASIA</label>
+    <input x-model="secret" type="secret" id="secret" placeholder="Kunci rahasia">
+    <p class="small">Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.</p>
+    <label for="encrypted">PESAN TERENKRIPSI</label>
+    <textarea 
+        x-text="encrypted = $encrypt(algo, message, secret)" 
+        name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi" readonly></textarea>
+    <p class="small"><button type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
+</div>
+
+<p>
+    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Dan aktifitas enkripsi dilakukan secara
+    lokal pada browser (peramban) anda tanpa melibat kan sisi server.
+</p>
+
+<section class="footnotes" role="doc-endnotes">
+    <hr>
+    <ol>
+        <li id="fn:1" role="doc-endnote">
+            <p><a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">https://en.wikipedia.org/wiki/Advanced_Encryption_Standard</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:2" role="doc-endnote">
+            <p><a href="https://en.wikipedia.org/wiki/Triple_DES">https://en.wikipedia.org/wiki/Triple_DES</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:3" role="doc-endnote">
+            <p><a href="https://en.wikipedia.org/wiki/Rabbit_(cipher)">https://en.wikipedia.org/wiki/Rabbit_(cipher)</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:4" role="doc-endnote">
+            <p><a href="https://en.wikipedia.org/wiki/RC4">https://en.wikipedia.org/wiki/RC4</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:5" role="doc-endnote">
+            <p><a href="https://alpinejs.dev/">https://alpinejs.dev/</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:6" role="doc-endnote">
+            <p><a href="https://github.com/brix/crypto-js">https://github.com/brix/crypto-js</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+    </ol>
+</section>
+
+<script src="//unpkg.com/alpinejs" defer></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.magic('clipboard', () => {
+            return subject => navigator.clipboard.writeText(subject)
+        });
+        Alpine.magic('encrypt', () => function (algo, message, secret) {
+            if (message !== '') {
+                if (algo === 'aes') return CryptoJS.AES.encrypt(message, secret)
+                else if (algo === 'tripledes') return CryptoJS.TripleDES.encrypt(message, secret)
+                else if (algo === 'rabbit') return CryptoJS.Rabbit.encrypt(message, secret)
+                else if (algo === 'rc4drop') return CryptoJS.RC4Drop.encrypt(message, secret)
+            }
+            return ''
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

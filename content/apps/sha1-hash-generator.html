@@ -2,13 +2,17 @@
 title: "SHA1 Hash Generator"
 date: 2021-09-11T17:52:02+07:00
 draft: false
-tags: ['app', 'js', 'alpinejs']
+tags: ['app', 'js', 'alpinejs', 'CryptoJS']
 description: "Membuat hash dengan algoritma kriptografi SHA1"
 ---
 
 <p>
     Apa itu hash<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
     dan SHA1<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+</p>
+<p>
+    Aplikasi ini dibuat menggunakan library AlpineJS<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
+    dan CryptoJS<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.
 </p>
 
 <div id="app" x-data="{ text: '', hash: '' }">
@@ -18,6 +22,24 @@ description: "Membuat hash dengan algoritma kriptografi SHA1"
     <input x-model='hash' type="text" id="hash" placeholder="" readonly>
     <p class="small"><button type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
 </div>
+
+<section class="footnotes" role="doc-endnotes">
+    <hr>
+    <ol>
+        <li id="fn:1" role="doc-endnote">
+            <p><a href="https://id.wikipedia.org/wiki/Hash">https://id.wikipedia.org/wiki/Hash</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:2" role="doc-endnote">
+            <p><a href="https://en.wikipedia.org/wiki/SHA-1">https://en.wikipedia.org/wiki/SHA-1</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:3" role="doc-endnote">
+            <p><a href="https://alpinejs.dev/">https://alpinejs.dev/</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:4" role="doc-endnote">
+            <p><a href="https://github.com/brix/crypto-js">https://github.com/brix/crypto-js</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+    </ol>
+</section>
 
 <script src="//unpkg.com/alpinejs" defer></script>
 <script>
@@ -29,15 +51,3 @@ description: "Membuat hash dengan algoritma kriptografi SHA1"
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js" integrity="sha512-t8vdA86yKUE154D1VlNn78JbDkjv3HxdK/0MJDMBUXUjshuzRgET0ERp/0MAgYS+8YD9YmFwnz6+FWLz1gRZaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha1.min.js" integrity="sha512-NHw1e1pc4RtmcynK88fHt8lpuetTUC0frnLBH6OrjmKGNnwY4nAnNBMjez4DRr9G1b+NtufOXLsF+apmkRCEIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<section class="footnotes" role="doc-endnotes">
-    <hr>
-    <ol>
-        <li id="fn:1" role="doc-endnote">
-            <p><a href="https://id.wikipedia.org/wiki/Hash">https://id.wikipedia.org/wiki/Hash</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-        </li>
-        <li id="fn:2" role="doc-endnote">
-            <p><a href="https://en.wikipedia.org/wiki/SHA-1">https://en.wikipedia.org/wiki/SHA-1</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-        </li>
-    </ol>
-</section>

@@ -3,12 +3,12 @@ title: "WhatsApp Link"
 date: 2021-09-06T14:07:21+07:00
 draft: false
 tags: ['app', 'js', 'alpinejs', 'whastapp']
-description: "Membuat link WhatsApp Me dengan menggabungkan api WhatsApp, nomor WhatsApp tujuan, dan pesan."
+description: "Membuat link WhatsApp Me, dan kirim pesan tanpa menyimpan nomor tujuan."
 ---
 <p>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi 
 pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.</p>
 
-<p>Aplikasi ini dibuat reaktif menggunakan AlpineJs. Otomatis memantau perubahan pada input nomor telepon
+<p>Aplikasi ini dibuat reaktif menggunakan AlpineJs<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Otomatis memantau perubahan pada input nomor telepon
 dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
 
 <div id="app" x-data="{ phoneNumber: '', message: '', generatedLink: '' }">
@@ -32,9 +32,18 @@ dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
     </p>
     <div x-show="phoneNumber.length > 9 && message !== ''">
         <label for="aLink">LINK YANG BISA DIKLIK</label><br>
-        <a id="aLink" :href="generatedLink">Klik disini untuk langsung mengirimkan pesan</a>
+        <a id="aLink" :href="generatedLink">Klik disini untuk mengirimkan pesan via WhatsApp web API.</a>
     </div>
 </div>
+
+<section class="footnotes" role="doc-endnotes">
+    <hr>
+    <ol>
+        <li id="fn:1" role="doc-endnote">
+            <p><a href="https://alpinejs.dev/">https://alpinejs.dev/</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+    </ol>
+</section>
 
 <script src="//unpkg.com/alpinejs" defer></script>
 <script>
