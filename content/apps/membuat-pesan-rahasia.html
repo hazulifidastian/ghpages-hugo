@@ -26,11 +26,14 @@ description: "Membuat pesan rahasia menggunakan 4 pilihan algoritma enkripsi"
         <option value="rabbit">Rabbit</option>
         <option value="rc4drop">RC4Drop</option>
     </select>
-    <label for="message">PESAN</label>
-    <textarea x-model="message" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
+
     <label for="secret">KUNCI RAHASIA</label>
     <input x-model="secret" type="secret" id="secret" placeholder="Kunci rahasia">
+
+    <label for="message">PESAN</label>
+    <textarea x-model="message" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
     <p class="small">Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.</p>
+
     <label for="encrypted">PESAN TERENKRIPSI</label>
     <textarea 
         x-text="encrypted = $encrypt(algo, message, secret)" 

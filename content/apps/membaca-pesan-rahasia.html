@@ -26,10 +26,13 @@ description: "Membaca pesan rahasia yang dibuat menggunakan 4 pilihan algoritma 
         <option value="rabbit">Rabbit</option>
         <option value="rc4drop">RC4Drop</option>
     </select>
-    <label for="encrypted">PESAN TERENKRIPSI</label>
-    <textarea x-model="encrypted" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+
     <label for="secret">KUNCI RAHASIA</label>
     <input x-model="secret" type="secret" id="secret" placeholder="Kunci rahasia">
+
+    <label for="encrypted">PESAN TERENKRIPSI</label>
+    <textarea x-model="encrypted" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+
     <p class="small">Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.</p>
     <label for="message">PESAN</label>
     <textarea 
