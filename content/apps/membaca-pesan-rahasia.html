@@ -38,12 +38,12 @@ description: "Membaca pesan rahasia yang dibuat menggunakan 4 pilihan algoritma 
     <textarea 
         x-text="message = $decrypt(algo, encrypted, secret)" 
         name="message" id="message" rows="3" placeholder="Pesan" readonly></textarea>
-    <p class="small"><button type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
+    <p class="small" style="text-align: right;"><button type="button" @click="$clipboard(message)">Salin ke Clipboard</button></p>
 </div>
 
 <p>
-    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Dan aktifitas dekripsi dilakukan secara
-    lokal pada browser (peramban) anda tanpa melibat kan sisi server.
+    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) 
+    anda tanpa melibatkan sisi server.
 </p>
 
 <section class="footnotes" role="doc-endnotes">

@@ -20,7 +20,7 @@ description: "Membuat hash dengan algoritma kriptografi MD5"
     <input x-model="text" @keyup="hash = CryptoJS.MD5(text)" type="text" id="text" placeholder="Isikan dengan teks">
     <label for="hash">MD5 HASH</label>
     <input x-model='hash' type="text" id="hash" placeholder="" readonly>
-    <p class="small"><button type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
+    <p class="small" style="text-align: right;"><button type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
 </div>
 
 <section class="footnotes" role="doc-endnotes">
