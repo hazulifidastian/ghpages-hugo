@@ -38,7 +38,7 @@ description: "Membuat pesan rahasia menggunakan 4 pilihan algoritma enkripsi"
     <textarea 
         x-text="encrypted = $encrypt(algo, message, secret)" 
         name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi" readonly></textarea>
-    <p class="small" style="text-align: right;"><button type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
+    <p class="small" style="text-align: right;"><button class="button button-xs button-outline-black" type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
 </div>
 
 <p>

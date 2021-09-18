@@ -38,7 +38,7 @@ description: "Membaca pesan rahasia yang dibuat menggunakan 4 pilihan algoritma 
     <textarea 
         x-text="message = $decrypt(algo, encrypted, secret)" 
         name="message" id="message" rows="3" placeholder="Pesan" readonly></textarea>
-    <p class="small" style="text-align: right;"><button type="button" @click="$clipboard(message)">Salin ke Clipboard</button></p>
+    <p class="small" style="text-align: right;"><button class="button button-xs button-outline-black" type="button" @click="$clipboard(message)">Salin ke Clipboard</button></p>
 </div>
 
 <p>
