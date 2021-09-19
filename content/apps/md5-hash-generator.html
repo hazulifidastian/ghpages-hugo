@@ -18,7 +18,7 @@ description: "Membuat hash dengan algoritma kriptografi MD5"
 <div class="box" id="app" x-data="{ text: '', hash: '' }">
     <div class="field">
         <label class="label" for="text">TEKS</label>
-        <input x-model="text" class="input" @keyup="hash = CryptoJS.MD5(text)" type="text" id="text" placeholder="Isikan dengan teks">
+        <input x-model="text" class="input" @keyup="hash = md5(text)" @paste="hash = md5(text)" type="text" id="text" placeholder="Isikan dengan teks">
     </div>
 
     <div class="field">
@@ -29,12 +29,15 @@ description: "Membuat hash dengan algoritma kriptografi MD5"
 </div>
 
 <script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js" integrity="sha512-t8vdA86yKUE154D1VlNn78JbDkjv3HxdK/0MJDMBUXUjshuzRgET0ERp/0MAgYS+8YD9YmFwnz6+FWLz1gRZaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.min.js" integrity="sha512-3sGbaDyhjGb+yxqvJKi/gl5zL4J7P5Yh4GXzq+E9puzlmVkIctjf4yP6LfijOUvtoBI3p9pLKia9crHsgYDTUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.magic('clipboard', () => {
             return subject => navigator.clipboard.writeText(subject)
         });
     });
+    let md5 = function(text) {
+        return CryptoJS.MD5(text)
+    }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js" integrity="sha512-t8vdA86yKUE154D1VlNn78JbDkjv3HxdK/0MJDMBUXUjshuzRgET0ERp/0MAgYS+8YD9YmFwnz6+FWLz1gRZaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.min.js" integrity="sha512-3sGbaDyhjGb+yxqvJKi/gl5zL4J7P5Yh4GXzq+E9puzlmVkIctjf4yP6LfijOUvtoBI3p9pLKia9crHsgYDTUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
