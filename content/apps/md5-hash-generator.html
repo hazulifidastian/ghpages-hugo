@@ -15,12 +15,17 @@ description: "Membuat hash dengan algoritma kriptografi MD5"
     dan CryptoJS<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.
 </p>
 
-<div id="app" x-data="{ text: '', hash: '' }">
-    <label for="text">TEKS</label>
-    <input x-model="text" @keyup="hash = CryptoJS.MD5(text)" type="text" id="text" placeholder="Isikan dengan teks">
-    <label for="hash">MD5 HASH</label>
-    <input x-model='hash' type="text" id="hash" placeholder="" readonly>
-    <p class="small" style="text-align: right;"><button class="button button-xs button-outline-black" type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
+<div class="box" id="app" x-data="{ text: '', hash: '' }">
+    <div class="field">
+        <label class="label" for="text">TEKS</label>
+        <input x-model="text" class="input" @keyup="hash = CryptoJS.MD5(text)" type="text" id="text" placeholder="Isikan dengan teks">
+    </div>
+
+    <div class="field">
+        <label class="label" for="hash">MD5 HASH</label>
+        <input x-model="hash" class="input" type="text" id="hash" placeholder="" readonly>
+        <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
+    </div>
 </div>
 
 <section class="footnotes" role="doc-endnotes">

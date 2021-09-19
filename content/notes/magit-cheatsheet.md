@@ -113,7 +113,6 @@ Contoh kasus kenapa kita butuh `branch new spin-off`:
 ## Referensi
 
 - EmacsConf 2019 Magit deep dive - Jonathan Chu https://www.youtube.com/watch?v=vS7YNdl64gY
-
 - https://magit.vc/manual/magit/Branch-Commands.html
 - https://fluca1978.github.io/2017/06/11/magit-spin-offs-anothew-way-to-name.html
 - http://blog.jenkster.com/2017/07/emacs-feature-branch-tip.html

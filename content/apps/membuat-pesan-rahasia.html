@@ -18,27 +18,38 @@ description: "Membuat pesan rahasia menggunakan 4 pilihan algoritma enkripsi"
     dan CryptoJS<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.
 </p>
 
-<div id="app" x-data="{ algo: 'aes', message: '', secret: '', encrypted: '' }">
-    <label for="algo">ALGORITMA</label>
-    <select x-model='algo' name="algo" id="algo">
-        <option value="aes" selected>AES</option>
-        <option value="tripledes">TripleDES</option>
-        <option value="rabbit">Rabbit</option>
-        <option value="rc4drop">RC4Drop</option>
-    </select>
+<div class="box" id="app" x-data="{ algo: 'aes', message: '', secret: '', encrypted: '' }">
+    <div class="field">
+        <label class="label" for="algo">ALGORITMA</label>
+        <div class="select">
+            <select x-model='algo' name="algo" id="algo">
+                <option value="aes" selected>AES</option>
+                <option value="tripledes">TripleDES</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="rc4drop">RC4Drop</option>
+            </select>
+        </div>
+    </div>
 
-    <label for="secret">KUNCI RAHASIA</label>
-    <input x-model="secret" type="secret" id="secret" placeholder="Kunci rahasia">
+    <div class="field">
+        <label class="label" for="secret">KUNCI RAHASIA</label>
+        <input x-model="secret" class="input" type="secret" id="secret" placeholder="Kunci rahasia">
+    </div>
 
-    <label for="message">PESAN</label>
-    <textarea x-model="message" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
-    <p class="small">Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.</p>
+    <div class="field">
+        <label class="label" for="message">PESAN</label>
+        <textarea x-model="message" class="textarea" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
+        <p class="help">Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.</p>
+    </div>
 
-    <label for="encrypted">PESAN TERENKRIPSI</label>
-    <textarea 
-        x-text="encrypted = $encrypt(algo, message, secret)" 
-        name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi" readonly></textarea>
-    <p class="small" style="text-align: right;"><button class="button button-xs button-outline-black" type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
+    <div class="field">
+        <label class="label" for="encrypted">PESAN TERENKRIPSI</label>
+        <textarea 
+            class="textarea"
+            x-text="encrypted = $encrypt(algo, message, secret)" 
+            name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi" readonly></textarea>
+        <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
+    </div>
 </div>
 
 <p>

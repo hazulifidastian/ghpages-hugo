@@ -11,28 +11,35 @@ pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang a
 <p>Aplikasi ini dibuat reaktif menggunakan AlpineJs<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Otomatis memantau perubahan pada input nomor telepon
 dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
 
-<div id="app" x-data="{ phoneNumber: '', message: '', generatedLink: '' }">
-    <label for="phoneNumber">NOMOR TELEPON</label>
-    <input x-model="phoneNumber" type="text" id="phoneNumber" placeholder="Nomor telepon, gunakan awalan +62 untuk indonesia">
-    <label for="message">PESAN</label>
-    <textarea x-model="message" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
-    <label for="link">LINK</label>
-    <textarea 
-        x-text="generatedLink =
-        'https://api.whatsapp.com/send?phone=' + '+' + phoneNumber.replace(/[^\d]/g,'') + '&text=' + encodeURI(message)
-        " 
-        name="link" 
-        id="link" 
-        rows="3" 
-        placeholder="Link terisi otomatis" 
-        readonly></textarea>
-    <p class="small">
-        <button class="button button-xs button-outline-black" type="button" @click="$clipboard(link)">Salin ke Clipboard</button>
-        Salin teks diatas untuk dijadikan url.
-    </p>
-    <div x-show="phoneNumber.length > 9 && message !== ''">
-        <label for="aLink">KIRIM PESAN WHATSAPP</label><br>
-        <a class="button button-md button-green" id="aLink" :href="generatedLink">KIRIM SEKARANG</a>
+<div class="box" id="app" x-data="{ phoneNumber: '', message: '', generatedLink: '' }">
+    <div class="field">
+        <label class="label" for="phoneNumber">NOMOR TELEPON</label>
+        <input x-model="phoneNumber" class="input" type="text" id="phoneNumber" placeholder="Nomor telepon, gunakan awalan +62 untuk indonesia">
+    </div>
+
+    <div class="field">
+        <label class="label" for="message">PESAN</label>
+        <textarea x-model="message" class="textarea" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
+    </div>
+
+    <div class="field">
+        <label class="label" for="link">LINK</label>
+        <textarea 
+            class="textarea"
+            x-text="generatedLink =
+            'https://api.whatsapp.com/send?phone=' + '+' + phoneNumber.replace(/[^\d]/g,'') + '&text=' + encodeURI(message)
+            " 
+            name="link" 
+            id="link" 
+            rows="3" 
+            placeholder="Link terisi otomatis" 
+            readonly></textarea>
+        <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(link)">Salin ke Clipboard</button></p>
+    </div>
+
+    <div class="field" x-show="phoneNumber.length > 9 && message !== ''">
+        <label class="label" for="aLink">KIRIM PESAN WHATSAPP</label>
+        <a target="_blank" class="button is-primary" id="aLink" :href="generatedLink">KIRIM SEKARANG</a>
     </div>
 </div>
 

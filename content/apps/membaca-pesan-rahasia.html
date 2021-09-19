@@ -18,27 +18,38 @@ description: "Membaca pesan rahasia yang dibuat menggunakan 4 pilihan algoritma 
     dan CryptoJS<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.
 </p>
 
-<div id="app" x-data="{ algo: 'aes', encrypted: '', secret: '', message: '' }">
-    <label for="algo">ALGORITMA</label>
-    <select x-model='algo' name="algo" id="algo">
-        <option value="aes" selected>AES</option>
-        <option value="tripledes">TripleDES</option>
-        <option value="rabbit">Rabbit</option>
-        <option value="rc4drop">RC4Drop</option>
-    </select>
+<div class="box" id="app" x-data="{ algo: 'aes', encrypted: '', secret: '', message: '' }">
+    <div class="field">
+        <label class="label" for="algo">ALGORITMA</label>
+        <div class="select">
+            <select x-model='algo' name="algo" id="algo">
+                <option value="aes" selected>AES</option>
+                <option value="tripledes">TripleDES</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="rc4drop">RC4Drop</option>
+            </select>
+        </div>
+    </div>
 
-    <label for="secret">KUNCI RAHASIA</label>
-    <input x-model="secret" type="secret" id="secret" placeholder="Kunci rahasia">
+    <div class="field">
+        <label class="label" for="secret">KUNCI RAHASIA</label>
+        <input x-model="secret" class="input" type="secret" id="secret" placeholder="Kunci rahasia">
+    </div>
 
-    <label for="encrypted">PESAN TERENKRIPSI</label>
-    <textarea x-model="encrypted" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+    <div class="field">
+        <label class="label" for="encrypted">PESAN TERENKRIPSI</label>
+        <textarea x-model="encrypted" class="textarea" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+        <p class="help">Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.</p>
+    </div>
 
-    <p class="small">Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.</p>
-    <label for="message">PESAN</label>
-    <textarea 
-        x-text="message = $decrypt(algo, encrypted, secret)" 
-        name="message" id="message" rows="3" placeholder="Pesan" readonly></textarea>
-    <p class="small" style="text-align: right;"><button class="button button-xs button-outline-black" type="button" @click="$clipboard(message)">Salin ke Clipboard</button></p>
+    <div class="field">
+        <label class="label" for="message">PESAN</label>
+        <textarea 
+            class="textarea"
+            x-text="message = $decrypt(algo, encrypted, secret)" 
+            name="message" id="message" rows="3" placeholder="Pesan" readonly></textarea>
+        <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(message)">Salin ke Clipboard</button></p>
+    </div>
 </div>
 
 <p>

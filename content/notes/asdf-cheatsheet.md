@@ -11,7 +11,7 @@ Berikut daftar opsi yang bisa digunakan pada perintah `asdf`.
 
 ### Manajemen Plugin
 
-<table>
+<table class="table is-hoverable">
   <thead>
     <tr>
       <th style="width:55%" align="left">Perintah</th>
@@ -56,7 +56,7 @@ Berikut daftar opsi yang bisa digunakan pada perintah `asdf`.
 
 ### Manajemen Paket
 
-<table>
+<table class="table is-hoverable">
   <thead>
     <tr>
       <th style="width:55%" align="left">Perintah</th>
@@ -109,7 +109,7 @@ Berikut daftar opsi yang bisa digunakan pada perintah `asdf`.
 
 ### Utilitas
 
-<table>
+<table class="table is-hoverable">
   <thead>
     <tr>
       <th style="width:55%" align="left">Perintah</th>
