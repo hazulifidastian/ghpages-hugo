@@ -8,7 +8,7 @@ description: "Membuat link WhatsApp Me, dan kirim pesan tanpa menyimpan nomor tu
 <p>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi 
 pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.</p>
 
-<p>Aplikasi ini dibuat reaktif menggunakan AlpineJs<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Otomatis memantau perubahan pada input nomor telepon
+<p>Aplikasi ini dibuat reaktif menggunakan <a href="https://alpinejs.dev/">AlpineJS</a>. Otomatis memantau perubahan pada input nomor telepon
 dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
 
 <div class="box" id="app" x-data="{ phoneNumber: '', message: '', generatedLink: '' }">
@@ -42,15 +42,6 @@ dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
         <a target="_blank" class="button is-primary" id="aLink" :href="generatedLink">KIRIM SEKARANG</a>
     </div>
 </div>
-
-<section class="footnotes" role="doc-endnotes">
-    <hr>
-    <ol>
-        <li id="fn:1" role="doc-endnote">
-            <p><a href="https://alpinejs.dev/">https://alpinejs.dev/</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-        </li>
-    </ol>
-</section>
 
 <script src="//unpkg.com/alpinejs" defer></script>
 <script>

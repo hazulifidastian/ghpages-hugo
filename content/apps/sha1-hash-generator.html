@@ -7,12 +7,12 @@ description: "Membuat hash dengan algoritma kriptografi SHA1"
 ---
 
 <p>
-    Apa itu hash<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
-    dan SHA1<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+    Apa itu <a href="https://id.wikipedia.org/wiki/Hash">hash</a>
+    dan <a href="https://en.wikipedia.org/wiki/SHA-1">SHA1</a>.
 </p>
 <p>
-    Aplikasi ini dibuat menggunakan library AlpineJS<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
-    dan CryptoJS<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.
+    Aplikasi ini dibuat menggunakan library <a href="https://alpinejs.dev/">AlpineJS</a>
+    dan <a href="https://github.com/brix/crypto-js">CryptoJS</a>.
 </p>
 
 <div class="box" id="app" x-data="{ text: '', hash: '' }">
@@ -27,24 +27,6 @@ description: "Membuat hash dengan algoritma kriptografi SHA1"
         <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
     </div>
 </div>
-
-<section class="footnotes" role="doc-endnotes">
-    <hr>
-    <ol>
-        <li id="fn:1" role="doc-endnote">
-            <p><a href="https://id.wikipedia.org/wiki/Hash">https://id.wikipedia.org/wiki/Hash</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-        </li>
-        <li id="fn:2" role="doc-endnote">
-            <p><a href="https://en.wikipedia.org/wiki/SHA-1">https://en.wikipedia.org/wiki/SHA-1</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-        </li>
-        <li id="fn:3" role="doc-endnote">
-            <p><a href="https://alpinejs.dev/">https://alpinejs.dev/</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-        </li>
-        <li id="fn:4" role="doc-endnote">
-            <p><a href="https://github.com/brix/crypto-js">https://github.com/brix/crypto-js</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-        </li>
-    </ol>
-</section>
 
 <script src="//unpkg.com/alpinejs" defer></script>
 <script>
