@@ -1,0 +1,55 @@
+---
+title: "One Rep Max Calculator"
+date: 2022-01-31T22:51:26+07:00
+draft: false
+tags: ['app', 'js', 'alpinejs', 'fitness']
+description: "Kalkulator untuk menghitung 1 repetisi maksimal"
+---
+
+<p>
+    Aplikasi ini dibuat menggunakan library <a href="https://alpinejs.dev/">AlpineJS</a>.
+    Perhitungan maksimal 1 repetisi menggunakan formula <a href="https://en.wikipedia.org/wiki/One-repetition_maximum">Brzycki</a>.
+</p>
+
+<div class="box" id="app" x-data="{ w: 0, reps: 2, orm: 0 }">
+    <div class="field">
+        <label class="label" for="text">BERAT</label>
+        <div class="control has-icons-right">
+            <input x-model="w" class="input" type="text" id="berat" placeholder="Isi dengan berat">
+            <span class="icon is-small is-right">
+                Kg
+            </span>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label" for="reps">REPETISI</label>
+        <div class="select">
+            <select x-model="reps" name="reps" id="reps">
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label" for="text">1 REP MAX</label>
+        <div class="control has-icons-right">
+            <input :value="(w / (1.0278 - (0.0278*reps))).toFixed(1)" class="input" type="text" id="orm" readonly>
+            <span class="icon is-small is-right">
+                Kg
+            </span>
+        </div>
+    </div>
+</div>
+
+<script src="//unpkg.com/alpinejs" defer></script>
