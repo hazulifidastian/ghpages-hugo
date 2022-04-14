@@ -60,4 +60,4 @@ disqusShortname = "hazulifidastian"
         startLevel = 2
 
 [permalinks]
-    stories = "/:filename"
+    # stories = "/:filename"
