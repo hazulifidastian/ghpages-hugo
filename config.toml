@@ -6,6 +6,7 @@ theme = "hugo-mood-theme"
 disableKinds = []
 googleAnalytics = "UA-9380146-9"
 disqusShortname = "hazulifidastian"
+enableEmoji = true
 
 [Author]
   name = "Hazuli Fidastian"
