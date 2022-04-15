@@ -1,8 +1,10 @@
 ---
 title: "Roadmap 2022"
 date: 2022-04-15T02:22:33+07:00
-draft: true
+draft: false
+toc: true
 tags: ["roadmap"]
+description: Target capaian keahlian pemrograman ditahun 2022
 ---
 
 Sudah pertengahan bulan April baru nulis roadmap 2022, tenang belum terlambat. Justru
@@ -14,7 +16,7 @@ sudah membuat sebagian konsep tulisan untuk roadmap 2021-2022. Namun biasa, jiwa
 waktu dan gambaran yang belum matang akan fokus yang mau diambil 2021-2022, tulisan hanya
 mengendap difolder draft.
 
-Roadmap disini berkaitan dengan capaian keahlian dibidang teknologi informasi, pemrograman
+Roadmap disini berkaitan dengan target capaian keahlian dibidang teknologi informasi, pemrograman
 khususnya. Dibuat sederhana untuk mengarahkan fokus peningkatan keahlian pada tahun 2022.
 
 ## Ekosistem
