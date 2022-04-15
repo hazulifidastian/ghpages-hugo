@@ -4,7 +4,6 @@ date: 2022-04-15T02:22:33+07:00
 draft: false
 toc: true
 tags: ["roadmap"]
-description: Target capaian keahlian pemrograman ditahun 2022
 ---
 
 Sudah pertengahan bulan April baru nulis roadmap 2022, tenang belum terlambat. Justru
@@ -124,131 +123,133 @@ yang cocok dengan market dan kemampuan diri saya.
 
 ## Skala Keseriusan dan Fokus
 
-<table class="table is-hoverable">
-  <thead>
-    <tr>
-      <th>Topik</th>
-      <th>Skala</th>
-      <th>Fokus</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Java Virtual Machine (JVM)</td>
-      <td>Serius</td>
-      <td>Android (DVM)</td>
-    </tr>
-    <tr>
-      <td>Kotlin</td>
-      <td>Serius Banget</td>
-      <td>Android</td>
-    </tr>
-    <tr>
-      <td>Java</td>
-      <td>Serius</td>
-      <td>Strict and rigid application architecture, Design pattern, Spring</td>
-    </tr>
-    <tr>
-      <td>Javascript</td>
-      <td>Serius</td>
-      <td>React, Singgle page application (SPA)</td>
-    </tr>
-    <tr>
-      <td>Bogdan's/Björn's Erlang Abstract Machine (Beam)</td>
-      <td>Santai Banget</td>
-      <td>Erlang OTP, councurency, availability, scalability</td>
-    </tr>
-    <tr>
-      <td>Elixir</td>
-      <td>Santai Banget</td>
-      <td>Basic Elixir</td>
-    </tr>
-    <tr>
-      <td>Erlang</td>
-      <td>Santai Banget</td>
-      <td>Basic Erlang</td>
-    </tr>
-    <tr>
-      <td>Machine Learning di Python</td>
-      <td>Santai Banget</td>
-      <td>Computer vision, supervised machine learning</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-container">
+  <table class="table is-hoverable">
+    <thead>
+      <tr>
+        <th>Topik</th>
+        <th>Skala</th>
+        <th>Fokus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Java Virtual Machine (JVM)</td>
+        <td>Serius</td>
+        <td>Android (DVM)</td>
+      </tr>
+      <tr>
+        <td>Kotlin</td>
+        <td>Serius Banget</td>
+        <td>Android</td>
+      </tr>
+      <tr>
+        <td>Java</td>
+        <td>Serius</td>
+        <td>Strict and rigid application architecture, Design pattern, Spring</td>
+      </tr>
+      <tr>
+        <td>Javascript</td>
+        <td>Serius</td>
+        <td>React, Singgle page application (SPA)</td>
+      </tr>
+      <tr>
+        <td>Bogdan's/Björn's Erlang Abstract Machine (Beam)</td>
+        <td>Santai Banget</td>
+        <td>Erlang OTP, councurency, availability, scalability</td>
+      </tr>
+      <tr>
+        <td>Elixir</td>
+        <td>Santai Banget</td>
+        <td>Basic Elixir</td>
+      </tr>
+      <tr>
+        <td>Erlang</td>
+        <td>Santai Banget</td>
+        <td>Basic Erlang</td>
+      </tr>
+      <tr>
+        <td>Machine Learning di Python</td>
+        <td>Santai Banget</td>
+        <td>Computer vision, supervised machine learning</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Resources
 
-<table class="table is-hoverable">
-  <thead>
-    <tr>
-      <th>Topik</th>
-      <th>Resource</th>
-      <th>URL</th>
-      <th>Keterangan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Kotlin</td>
-      <td>Pemrograman Kotlin : Pemula sampai Mahir</td>
-      <td><a href="https://www.udemy.com/course/pemrograman-kotlin-pemula-sampai-mahir/">Link</a></td>
-      <td>Video tutorial</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Philipp Lackner Channel</td>
-      <td><a href="https://www.youtube.com/c/PhilippLackner">Link</a></td>
-      <td>Video tutorial Kotlin android dan ktor</td>
-    </tr>
-    <tr>
-      <td>Java</td>
-      <td>Pemrograman Java : Pemula sampai Mahir</td>
-      <td><a href="https://www.udemy.com/course/pemrograman-java-pemula-sampai-mahir">Link</a></td>
-      <td>Video tutorial</td>
-    </tr>
-    <tr>
-      <td>Javascript</td>
-      <td>Next Amazona: Build ECommerce Website Like Amazon By Next.JS</td>
-      <td><a href="https://www.udemy.com/course/nextjs-ecommerce/">Link</a></td>
-      <td>Video tutorial</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>React - The Complete Guide (incl Hooks, React Router, Redux)</td>
-      <td><a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">Link</a></td>
-      <td>Video tutorial</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>RedwoodJS</td>
-      <td><a href="https://redwoodjs.com/docs/introduction">Link</a></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Elixir</td>
-      <td>Programming Elixir 1.6</td>
-      <td><a href="https://pragprog.com/titles/elixir16/programming-elixir-1-6/">Link</a></td>
-      <td>Buku</td>
-    </tr>
-    <tr>
-      <td>Erlang</td>
-      <td>Learn You Some Erlang</td>
-      <td><a href="https://learnyousomeerlang.com/">Link</a></td>
-      <td>Buku online</td>
-    </tr>
-    <tr>
-      <td>Machine Learning Python</td>
-      <td>Murtaza's Workshop - Robotics and AI Channel</td>
-      <td><a href="https://www.youtube.com/c/MurtazasWorkshopRoboticsandAI">Link</a></td>
-      <td>Computer vision, OPENCV</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Nicholas Renotte Channel</td>
-      <td><a href="https://www.youtube.com/c/NicholasRenotte">Link</a></td>
-      <td>Computer vision, OPENCV</td>
-    </tr>
-  </tbody>
-</table>
-
-
+<div class="table-container">
+  <table class="table is-hoverable">
+    <thead>
+      <tr>
+        <th>Topik</th>
+        <th>Resource</th>
+        <th>URL</th>
+        <th>Keterangan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Kotlin</td>
+        <td>Pemrograman Kotlin : Pemula sampai Mahir</td>
+        <td><a href="https://www.udemy.com/course/pemrograman-kotlin-pemula-sampai-mahir/">Link</a></td>
+        <td>Video tutorial</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Philipp Lackner Channel</td>
+        <td><a href="https://www.youtube.com/c/PhilippLackner">Link</a></td>
+        <td>Video tutorial Kotlin android dan ktor</td>
+      </tr>
+      <tr>
+        <td>Java</td>
+        <td>Pemrograman Java : Pemula sampai Mahir</td>
+        <td><a href="https://www.udemy.com/course/pemrograman-java-pemula-sampai-mahir">Link</a></td>
+        <td>Video tutorial</td>
+      </tr>
+      <tr>
+        <td>Javascript</td>
+        <td>Next Amazona: Build ECommerce Website Like Amazon By Next.JS</td>
+        <td><a href="https://www.udemy.com/course/nextjs-ecommerce/">Link</a></td>
+        <td>Video tutorial</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>React - The Complete Guide (incl Hooks, React Router, Redux)</td>
+        <td><a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">Link</a></td>
+        <td>Video tutorial</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>RedwoodJS</td>
+        <td><a href="https://redwoodjs.com/docs/introduction">Link</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Elixir</td>
+        <td>Programming Elixir 1.6</td>
+        <td><a href="https://pragprog.com/titles/elixir16/programming-elixir-1-6/">Link</a></td>
+        <td>Buku</td>
+      </tr>
+      <tr>
+        <td>Erlang</td>
+        <td>Learn You Some Erlang</td>
+        <td><a href="https://learnyousomeerlang.com/">Link</a></td>
+        <td>Buku online</td>
+      </tr>
+      <tr>
+        <td>Machine Learning Python</td>
+        <td>Murtaza's Workshop - Robotics and AI Channel</td>
+        <td><a href="https://www.youtube.com/c/MurtazasWorkshopRoboticsandAI">Link</a></td>
+        <td>Computer vision, OPENCV</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Nicholas Renotte Channel</td>
+        <td><a href="https://www.youtube.com/c/NicholasRenotte">Link</a></td>
+        <td>Computer vision, OPENCV</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
