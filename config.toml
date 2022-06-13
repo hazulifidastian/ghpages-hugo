@@ -61,4 +61,6 @@ enableEmoji = true
         startLevel = 2
 
 [permalinks]
-    # stories = "/:filename"
+    apps = "/app/:filename"
+    stories = "/blog/:filename"
+    notes = "/blog/:filename"
