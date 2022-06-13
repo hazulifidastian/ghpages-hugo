@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Linux Notes"
 date: 2022-06-08T07:13:01+07:00
-draft: true
+draft: false
 tags: ["ubuntu", "linux", "notes"]
 ---
 
