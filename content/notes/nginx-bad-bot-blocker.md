@@ -1,5 +1,5 @@
 ---
-title: "Nginx Bad Bots Blocker"
+title: "Nginx Bad Bot Blocker"
 date: 2022-06-13T15:48:03+07:00
 draft: false
 disquss: true

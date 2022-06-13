@@ -5,7 +5,7 @@ draft: true
 tags: ["ubuntu", "linux", "notes"]
 ---
 
-#### Timezone
+### Timezone
 
 Show Timezone:
 
@@ -24,3 +24,41 @@ Set Timezone:
 ```bash
 timedatectl set-timezone Asia/Jakarta
 ```
+
+### Add sudo user
+
+* Tambah user
+  ```
+  sudo adduser <username>
+  ```
+* Tambah ke group `sudo`
+  ```
+  sudo adduser <username> sudo
+  ```
+* verifikasi
+  ```
+  id <username>
+  ```
+
+### Change password
+
+* Ganti password user
+  ```
+  sudo passwd <username>
+  ```
+* Delete password
+  ```
+  sudo passwd --delete <username>
+  ```
+* Force expire password
+  ```
+  sudo passwd --expire <username>
+  ```
+* Lock user
+  ```
+  sudo passwd --lock <username>
+  ```
+* Unlock user
+  ```
+  sudo passwd --unlock <username>
+  ```
