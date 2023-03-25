@@ -2,6 +2,7 @@
 title: "Zig ke Mysql Dengan Library C"
 date: 2023-03-25T22:14:30+07:00
 draft: false
+toc: true
 tags: ["zig", "mysql"]
 ---
 
