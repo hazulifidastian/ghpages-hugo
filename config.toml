@@ -52,7 +52,7 @@ enableEmoji = true
         lineNos = false
         lineNumbersInTable = true
         noClasses = true
-        style = "tango"
+        style = "nord"
     [markup.goldmark.renderer]
         unsafe= true
     [markup.tableOfContents]
