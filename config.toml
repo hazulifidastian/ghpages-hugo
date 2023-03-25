@@ -25,7 +25,7 @@ enableEmoji = true
     weight = 3
 
 [params]
-    mainSections = ["stories", "apps", "notes"]
+    mainSections = ["blog", "apps", "notes"]
 
     description = "Halo!, saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
 
@@ -52,7 +52,7 @@ enableEmoji = true
         lineNos = false
         lineNumbersInTable = true
         noClasses = true
-        style = "nord"
+        style = "monokailight"
     [markup.goldmark.renderer]
         unsafe= true
     [markup.tableOfContents]
@@ -62,5 +62,5 @@ enableEmoji = true
 
 [permalinks]
     apps = "/app/:filename"
-    stories = "/blog/:filename"
+    blog = "/blog/:filename"
     notes = "/blog/:filename"
