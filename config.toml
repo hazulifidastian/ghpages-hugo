@@ -27,7 +27,7 @@ enableEmoji = true
 [params]
     mainSections = ["stories", "apps", "notes"]
 
-    description = "Nama saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
+    description = "Halo!, saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
 
     defaultContentLanguage = "id"
 
