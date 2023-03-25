@@ -52,7 +52,7 @@ enableEmoji = true
         lineNos = false
         lineNumbersInTable = true
         noClasses = true
-        style = "monokailight"
+        style = "tango"
     [markup.goldmark.renderer]
         unsafe= true
     [markup.tableOfContents]
