@@ -7,23 +7,23 @@ tags: ["ubuntu", "linux", "notes"]
 
 ### Timezone
 
-Show Timezone:
+* Show Timezone:
 
-```bash
-timedatectl
-```
+  ```bash
+  timedatectl
+  ```
 
-List Timezone:
+* List Timezone:
 
-```bash
-timedatectl list-timezones
-```
+  ```bash
+  timedatectl list-timezones
+  ```
 
-Set Timezone:
+* Set Timezone:
 
-```bash
-timedatectl set-timezone Asia/Jakarta
-```
+  ```bash
+  timedatectl set-timezone Asia/Jakarta
+  ```
 
 ### Add sudo user
 
