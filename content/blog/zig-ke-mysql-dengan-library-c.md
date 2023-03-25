@@ -3,6 +3,7 @@ title: "Zig ke Mysql Dengan Library C"
 date: 2023-03-25T22:14:30+07:00
 draft: false
 toc: true
+disqus: true
 tags: ["zig", "mysql"]
 ---
 
@@ -194,12 +195,8 @@ Mysql Client version 8.0.32
 4  Volvo  29000
 ```
 
-### Kode Lengkap
-
-Kode lengkap ada di [https://github.com/hazulifidastian/zig-mysql](https://github.com/hazulifidastian/zig-mysql).
-
-
 ## Referensi
 
-1. [Tutorial MySQL C API programming](https://zetcode.com/db/mysqlc/)
-2. [Dokumentasi Zig](https://ziglang.org/documentation/0.9.1/)
+1. Kode lengkap ada di [https://github.com/hazulifidastian/zig-mysql](https://github.com/hazulifidastian/zig-mysql).
+2. [Tutorial MySQL C API programming](https://zetcode.com/db/mysqlc/)
+3. [Dokumentasi Zig](https://ziglang.org/documentation/0.9.1/)

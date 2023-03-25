@@ -52,7 +52,7 @@ enableEmoji = true
         lineNos = false
         lineNumbersInTable = true
         noClasses = true
-        style = "github"
+        style = "monokailight"
     [markup.goldmark.renderer]
         unsafe= true
     [markup.tableOfContents]
