@@ -1,12 +1,11 @@
 ---
-title: "About Me"
+title: "Tentang Saya"
+date: 2023-08-10T00:00:00+07:00
 weight: 2
 disqus: false
 ---
 
-![Me](/images/me.png)
-
-Saya Hazuli Fidastian. Software developer di Jakarta. Bekerja lepas untuk pengembangan aplikasi di platform web dan mobile.
+Saya Hazuli Fidastian, pengembang perangkat lunak di Jakarta. Bekerja lepas untuk pengembangan aplikasi di platform web, desktop dan mobile.
 
 Anda bisa menemukan saya online di [Twitter](https://twitter.com/hazulifidastian) dan di [Medium](https://medium.com/@HazuliFidastian).
 

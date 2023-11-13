@@ -9,8 +9,8 @@ disqusShortname = "hazulifidastian"
 enableEmoji = true
 
 [Author]
-  name = "Hazuli Fidastian"
-  bio = "Nama saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
+  name = "Hazuli"
+  bio = "Pengembang perangkat lunak, berkerja lepas (freelance) di Jakarta."
 
 [[menu.main]]
     identifier = "about"
@@ -25,7 +25,7 @@ enableEmoji = true
     weight = 3
 
 [params]
-    mainSections = ["blog", "apps", "notes"]
+    mainSections = []
 
     description = "Halo!, saya Hazuli Fidastian. Saya bekerja lepas sebagai pengembang aplikasi di Jakarta."
 
