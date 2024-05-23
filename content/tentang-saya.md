@@ -5,13 +5,12 @@ weight: 2
 disqus: false
 ---
 
-Saya Hazuli Fidastian, pengembang perangkat lunak di Jakarta. Bekerja lepas untuk pengembangan aplikasi di platform web, desktop dan mobile.
+Saya Hazuli Fidastian, pengembang perangkat lunak di Jakarta. Bekerja lepas untuk pengembangan aplikasi di platform web.
 
-Anda bisa menemukan saya online di [Twitter](https://twitter.com/hazulifidastian) dan di [Medium](https://medium.com/@HazuliFidastian).
+Anda bisa menemukan saya online di [Twitter](https://twitter.com/hazulifidastian) dan di [Instagram](https://instagram.com/HazuliFidastian).
 
-Ingin membicarakan proyek? Hubungi saya melalui [email](mailto:hazulifidastian@live.com).
+Ingin diskusi? Hubungi saya melalui [email](mailto:hazulifidastian@live.com).
 
 Catatan:
 
-- **Doodle**: Sketsa oleh [Wiwin](https://medium.com/@inggilwindiarti).
 - **Template**: Based on [Hugo Mood](https://github.com/hazulifidastian/hugo-mood-theme).

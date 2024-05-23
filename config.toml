@@ -7,16 +7,17 @@ disableKinds = []
 googleAnalytics = "UA-9380146-9"
 disqusShortname = "hazulifidastian"
 enableEmoji = true
+pluralizelisttitles = false
 
 [Author]
   name = "Hazuli"
   bio = "Pengembang perangkat lunak, berkerja lepas (freelance) di Jakarta."
 
 [[menu.main]]
-    identifier = "about"
-    name = "Me"
-    url = "/about/"
-    weight = 3
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 1
 
 [[menu.main]]
     identifier = "tags"
@@ -61,6 +62,6 @@ enableEmoji = true
         startLevel = 2
 
 [permalinks]
-    apps = "/app/:filename"
+    aplikasi = "/aplikasi/:filename"
     blog = "/blog/:filename"
-    notes = "/blog/:filename"
+    catatan = "/catatan/:filename"
